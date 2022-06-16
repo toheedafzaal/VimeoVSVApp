@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -15,7 +16,15 @@ namespace WebBrowser_HTML_File_CS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            //File.Delete("UGUID");
+            if (File.Exists("UGUID"))
+            {
+                Application.Run(new Form1());
+            }
+            else
+            {
+                Application.Run(new LoginScreen());
+            }
         }
     }
 }

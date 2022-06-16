@@ -14,7 +14,6 @@ C:\Users\haier\Downloads\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_CS\obj\x8
 C:\Users\haier\Downloads\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_CS\obj\x86\Debug\WebBrowser_HTML_File_CS.csproj.CoreCompileInputs.cache
 C:\Users\haier\Downloads\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_CS\obj\x86\Debug\WebBrowser_HTML_File_CS.exe
 C:\Users\haier\Downloads\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_CS\obj\x86\Debug\WebBrowser_HTML_File_CS.pdb
-C:\Users\haier\Desktop\Dot NET core\Panacealogic Office\Vimeo Desktop Application\16 Jun 2022 Vimeo Vsv Deployement\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_CS\obj\x86\Debug\WebBrowser_HTML_File_CS.csproj.AssemblyReference.cache
 C:\Users\haier\Desktop\Dot NET core\Panacealogic Office\Vimeo Desktop Application\16 Jun 2022 Vimeo Vsv Deployement\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_CS\obj\x86\Debug\WebBrowser_HTML_File_CS.Form1.resources
 C:\Users\haier\Desktop\Dot NET core\Panacealogic Office\Vimeo Desktop Application\16 Jun 2022 Vimeo Vsv Deployement\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_CS\obj\x86\Debug\WebBrowser_HTML_File_CS.Properties.Resources.resources
 C:\Users\haier\Desktop\Dot NET core\Panacealogic Office\Vimeo Desktop Application\16 Jun 2022 Vimeo Vsv Deployement\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_CS\obj\x86\Debug\WebBrowser_HTML_File_CS.csproj.GenerateResource.cache
@@ -29,3 +28,5 @@ C:\Users\haier\Desktop\Dot NET core\Panacealogic Office\Vimeo Desktop Applicatio
 C:\Users\haier\Desktop\Dot NET core\Panacealogic Office\Vimeo Desktop Application\16 Jun 2022 Vimeo Vsv Deployement\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_CS\obj\x86\Debug\VimeoVSV.application
 C:\Users\haier\Desktop\Dot NET core\Panacealogic Office\Vimeo Desktop Application\16 Jun 2022 Vimeo Vsv Deployement\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_CS\obj\x86\Debug\VimeoVSV.exe
 C:\Users\haier\Desktop\Dot NET core\Panacealogic Office\Vimeo Desktop Application\16 Jun 2022 Vimeo Vsv Deployement\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_CS\obj\x86\Debug\VimeoVSV.pdb
+C:\Users\haier\Desktop\Dot NET core\Panacealogic Office\Vimeo Desktop Application\16 Jun 2022 Vimeo Vsv Deployement\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_CS\obj\x86\Debug\WebBrowser_HTML_File_CS.LoginScreen.resources
+C:\Users\haier\Desktop\Dot NET core\Panacealogic Office\Vimeo Desktop Application\16 Jun 2022 Vimeo Vsv Deployement\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_CS\obj\x86\Debug\WebBrowser_HTML_File_CS.csproj.AssemblyReference.cache
