@@ -3,10 +3,10 @@
   <PropertyGroup>
     <PublishUrlHistory>C:\Users\haier\Desktop\Dot NET core\Panacealogic Office\Vimeo Desktop Application\16 Jun 2022 Vimeo Vsv Deployement\published\|publish\</PublishUrlHistory>
     <InstallUrlHistory>https://raw.githubusercontent.com/toheedafzaal/VimeoVSVApp/main/published/</InstallUrlHistory>
-    <SupportUrlHistory />
+    <SupportUrlHistory>https://www.panacealogics.com/</SupportUrlHistory>
     <UpdateUrlHistory />
     <BootstrapperUrlHistory />
-    <ErrorReportUrlHistory />
+    <ErrorReportUrlHistory>https://www.panacealogics.com/</ErrorReportUrlHistory>
     <FallbackCulture>en-US</FallbackCulture>
     <VerifyUploadedFiles>false</VerifyUploadedFiles>
   </PropertyGroup>

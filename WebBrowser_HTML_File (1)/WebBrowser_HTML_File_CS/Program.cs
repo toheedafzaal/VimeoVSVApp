@@ -17,6 +17,8 @@ namespace WebBrowser_HTML_File_CS
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //File.Delete("UGUID");
+            var yrversion = Application.ProductVersion;
+            yrversion = yrversion + 1;
             if (File.Exists("UGUID"))
             {
                 Application.Run(new Form1());

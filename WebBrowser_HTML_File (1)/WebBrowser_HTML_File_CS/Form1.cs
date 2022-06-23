@@ -13,6 +13,7 @@ using System.Reflection;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Runtime.InteropServices;
+using Microsoft.Win32;
 
 namespace WebBrowser_HTML_File_CS
 {
@@ -27,6 +28,7 @@ namespace WebBrowser_HTML_File_CS
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //GetInstalledApps();
             getVideoIds();
             this.webBrowser1.ObjectForScripting = this;
             Assembly assembly = Assembly.GetExecutingAssembly();
@@ -65,5 +67,48 @@ namespace WebBrowser_HTML_File_CS
             //string test = "1323";
             return idssss;
         }
+        //public List<string> GetInstalledApps()
+
+        //{
+
+        //    string uninstallKey = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall";
+        //    List<string> listttttttt = new List<string>();
+
+        //    using (RegistryKey rk = Registry.LocalMachine.OpenSubKey(uninstallKey))
+
+        //    {
+
+        //        foreach (string skName in rk.GetSubKeyNames())
+
+        //        {
+
+        //            using (RegistryKey sk = rk.OpenSubKey(skName))
+
+        //            {
+
+        //                try
+
+        //                {
+
+        //                    listttttttt.Add((string)sk.GetValue("DisplayName"));
+
+        //                }
+
+        //                catch (Exception ex)
+
+        //                { }
+
+        //            }
+
+        //        }
+        //        var result = listttttttt.Contains("Zoom");
+        //        return listttttttt;
+
+
+
+
+        //    }
+
+        //}
     }
 }

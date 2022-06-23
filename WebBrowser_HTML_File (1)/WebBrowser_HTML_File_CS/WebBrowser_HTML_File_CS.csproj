@@ -29,10 +29,10 @@
     <UpdateUrl>https://raw.githubusercontent.com/toheedafzaal/VimeoVSVApp/main/published/</UpdateUrl>
     <SupportUrl>https://www.panacealogics.com/</SupportUrl>
     <ErrorReportUrl>https://www.panacealogics.com/</ErrorReportUrl>
-    <ProductName>VimeoVSV</ProductName>
+    <ProductName>Smoke Shop Video</ProductName>
     <PublisherName>Panacealogics</PublisherName>
     <SuiteName>Toheed Afzaal</SuiteName>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
