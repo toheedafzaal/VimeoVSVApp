@@ -26,7 +26,7 @@ namespace WebBrowser_HTML_File_CS
             LoginScreen vimeologin = new LoginScreen();
             var constring = ConfigurationManager.ConnectionStrings["vimeocs"].ConnectionString;
             SqlConnection con = new SqlConnection(constring);
-            SqlCommand cmd = new SqlCommand("select * from tblUser where Username='" + textBox1.Text + "' and Password='" + textBox2.Text + "'", con);
+            SqlCommand cmd = new SqlCommand("select * from VSVUser where VSVUserId='" + textBox1.Text + "' and Password='" + textBox2.Text + "'", con);
             con.Open(); //select* from LoginTable where username = '" + txtusername.Text + "'"
             int i = cmd.ExecuteNonQuery();
             con.Close();

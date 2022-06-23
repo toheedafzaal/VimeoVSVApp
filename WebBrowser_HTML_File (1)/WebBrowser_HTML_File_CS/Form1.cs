@@ -45,17 +45,17 @@ namespace WebBrowser_HTML_File_CS
             //var constring = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=dbVimeo;User ID=sa;Password=sa";
             var constring = ConfigurationManager.ConnectionStrings["vimeocs"].ConnectionString;
             SqlConnection con = new SqlConnection(constring);
-            SqlCommand selectvideoids = new SqlCommand("Select VideoId from tblVideos", con);
+            SqlCommand selectvideoids = new SqlCommand("Select URL from VSVProducts", con);
             DataTable dt = new DataTable();
             con.Open();
             SqlDataReader selectedVids = selectvideoids.ExecuteReader();
             dt.Load(selectedVids);
             con.Close();
-            var ids = new List<int>();
+            var ids = new List<string>();
             //var ids = new object();
             foreach (DataRow row in dt.Rows)
             {
-                ids.Add(Convert.ToInt32(row["VideoId"]));
+                ids.Add(Convert.ToString(row["URL"]));
             }
             List<string> videoids = ids.ConvertAll<string>(x => x.ToString());
             //String.Join(", ", videoids);

@@ -29,8 +29,10 @@
 
         //var videos = [35648453];
         var videoss = window.external.getVideoIds();
-        alert("This is the 3rd Version of application");
+        alert(videoss.length);
         var videos = videoss.split(",");
+        alert(videos.length);
+        alert(videos);
         var savePlaysarr = [];
         var respDblist;
         var arrayVideos = [];
@@ -42,7 +44,8 @@
                 return false;
             }
             console.log(videos);
-            var video = 'https://vimeo.com/' + videos.shift();
+            //var video = 'https://vimeo.com/' + videos.shift();
+            var video = videos.shift();
 
             if (!player) {
 
