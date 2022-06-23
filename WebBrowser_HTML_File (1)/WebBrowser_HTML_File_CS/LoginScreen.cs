@@ -20,14 +20,14 @@ namespace WebBrowser_HTML_File_CS
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)//("insert into tblUser values('" + textBox1.Text + "', '" + textBox2.Text + "')"
         {
             Form1 vimeohome = new Form1();
             LoginScreen vimeologin = new LoginScreen();
             var constring = ConfigurationManager.ConnectionStrings["vimeocs"].ConnectionString;
             SqlConnection con = new SqlConnection(constring);
-            SqlCommand cmd = new SqlCommand("insert into tblUser values('" + textBox1.Text + "', '" + textBox2.Text + "')", con);
-            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from tblUser where Username='" + textBox1.Text + "' and Password='" + textBox2.Text + "'", con);
+            con.Open(); //select* from LoginTable where username = '" + txtusername.Text + "'"
             int i = cmd.ExecuteNonQuery();
             con.Close();
             if (i != 0)

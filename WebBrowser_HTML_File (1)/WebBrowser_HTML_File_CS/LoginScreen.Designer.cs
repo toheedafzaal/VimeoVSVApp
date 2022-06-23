@@ -82,7 +82,7 @@ namespace WebBrowser_HTML_File_CS
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(195, 32);
             this.button1.TabIndex = 4;
-            this.button1.Text = "ADD  NOW";
+            this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -109,7 +109,7 @@ namespace WebBrowser_HTML_File_CS
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginScreen";
-            this.Text = "VimeoVSV Credentials";
+            this.Text = "Smoke Shop Video Credentials (Updated)";
             this.ResumeLayout(false);
             this.PerformLayout();
 
