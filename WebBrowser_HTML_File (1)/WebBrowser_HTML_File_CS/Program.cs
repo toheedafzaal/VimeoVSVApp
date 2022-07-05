@@ -21,7 +21,7 @@ namespace WebBrowser_HTML_File_CS
             yrversion = yrversion + 1;
             if (File.Exists("UGUID"))
             {
-                Application.Run(new Form1());
+                Application.Run(new NewDateScreen());
             }
             else
             {

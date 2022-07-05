@@ -1,0 +1,58 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.5": {},
+    ".NETFramework,Version=v4.5/win": {},
+    ".NETFramework,Version=v4.5/win-x64": {},
+    ".NETFramework,Version=v4.5/win-x86": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.5": []
+  },
+  "packageFolders": {
+    "C:\\Users\\haier\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\haier\\Desktop\\Dot NET core\\Panacealogic Office\\Vimeo Desktop Application\\16 Jun 2022 Vimeo Vsv Deployement\\WebBrowser_HTML_File (1)\\WebBrowser_HTML_File_CS\\WebBrowser_HTML_File_CS.csproj",
+      "projectName": "WebBrowser_HTML_File_CS",
+      "projectPath": "C:\\Users\\haier\\Desktop\\Dot NET core\\Panacealogic Office\\Vimeo Desktop Application\\16 Jun 2022 Vimeo Vsv Deployement\\WebBrowser_HTML_File (1)\\WebBrowser_HTML_File_CS\\WebBrowser_HTML_File_CS.csproj",
+      "packagesPath": "C:\\Users\\haier\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\haier\\Desktop\\Dot NET core\\Panacealogic Office\\Vimeo Desktop Application\\16 Jun 2022 Vimeo Vsv Deployement\\WebBrowser_HTML_File (1)\\WebBrowser_HTML_File_CS\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\haier\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net45"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net45": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "net45": {}
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}

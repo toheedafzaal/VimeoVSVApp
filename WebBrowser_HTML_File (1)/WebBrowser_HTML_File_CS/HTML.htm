@@ -24,11 +24,14 @@
 <body>
 
     <div id="video-container"></div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
 
-        //var videos = [35648453];
+
+        
         var videoss = window.external.getVideoIds();
+        var ssDbTime = window.external.getStartTime();
+        var eeDbTime = window.external.getEndTime();
         var videos = videoss.split(",");
         var savePlaysarr = [];
         var respDblist;
@@ -36,74 +39,105 @@
         var isLoadWindow = 0;
         var loopIndex = 0;
         var videotime = [];
-        var playMovie = function (player, videos, options) {
-            if (!videos.length) {
-                return false;
-            }
-            console.log(videos);
-            //var video = 'https://vimeo.com/' + videos.shift();
-            var video = videos.shift();
+        var now = new Date();
+        var currentTime = now.toISOString();
+        console.log(currentTime);
+        var nowDate = currentTime.split('T')[0];
+        //var startTime = new Date(nowDate + "T11:55");
+        //var endTime = new Date(nowDate + "T13:03");
+        var sDbTime = "T";
+        sDbTime += ssDbTime;
+        var startTime = new Date(nowDate + sDbTime);
+        //alert(startTime);
+        var eDbTime = "T";
+        eDbTime += eeDbTime;
+        var endTime = new Date(nowDate + eDbTime);
+        ////////
+        //if(currenttime>=Starttime&&currenttime<=StopTime){playMovie(null, videos, options);} else{stopplaying or exit};
+        var playMovie = function (player, videos, options, startTime, endTime) { // get startTime and endTime
+            // get currentTime here
+            //debugger;
+            now = new Date();
+            currentTime = now.toISOString();
+            nowDate = currentTime.split('T')[1];
+            console.log(Date.parse(currentTime));
+            console.log(Date.parse(startTime));
+            console.log(Date.parse(endTime));
+            // add if-else to check for currentTime is between startTime and endTime
+            if (Date.parse(currentTime) > Date.parse(startTime) && Date.parse(currentTime) < Date.parse(endTime)) {
+                if (!videos.length) {
+                    return false;
+                }
+                console.log(videos);
+                //var video = 'https://vimeo.com/' + videos.shift();
+                var video = videos.shift();
 
-            if (!player) {
+                if (!player) {
 
-                options.url = video;
-                console.log(video, 'video*URL');
-                testid = video;
-                player = new Vimeo.Player('video-container', options);
+                    options.url = video;
+                    console.log(video, 'video*URL');
+                    testid = video;
+                    player = new Vimeo.Player('video-container', options);
 
-                player.play();
+                    player.play();
 
-                player.on('ended', function () {
+                    player.on('ended', function () {
 
-                    playMovie(player, videos, options)
-                })
-            } else {
-                console.log(video);
-
-                testid = video;
-                const idd = video.split("/");
-
-                var videoid = idd[3];
-
-                player.loadVideo(videoid)
-                    .then(function () {
-
-                        player.play();
+                        playMovie(player, videos, options, startTime, endTime) // pass startTime and endTime
                     })
-                    .catch(function (error) {
-                        console.log(testid + '*');
+                } else {
+                    console.log(video);
 
-                        console.warn(error);
-                    })
-                    .complete(function () { alert("function completed"); })
-                    ;
-                alert("end of load")
+                    testid = video;
+                    const idd = video.split("/");
+
+                    var videoid = idd[3];
+
+                    player.loadVideo(videoid)
+                        .then(function () {
+
+                            player.play();
+                        })
+                        .catch(function (error) {
+                            console.log(testid + '*');
+
+                            console.warn(error);
+                        })
+                        .complete(function () { alert("function completed"); })
+                        ;
+                    //alert("end of load")
+                }
+                player.getEnded(true).then(function (ended) {
+
+                    if (videos.length == 3) {
+                        var respDateTime = GetPlaysTime();
+                        videotime.push(respDateTime);
+                    }
+                    else if (videos.length == 2) {
+                        var respDateTime = GetPlaysTime();
+                        videotime.push(respDateTime);
+                    }
+                    else if (videos.length == 1) {
+                        var respDateTime = GetPlaysTime();
+                        videotime.push(respDateTime);
+                    }
+                    else if (videos.length == 0) {
+                        isLoadWindow = 1;
+                        loopIndex++;
+
+                    }
+                });
             }
-            player.getEnded(true).then(function (ended) {
-
-                if (videos.length == 3) {
-                    var respDateTime = GetPlaysTime();
-                    videotime.push(respDateTime);
-                }
-                else if (videos.length == 2) {
-                    var respDateTime = GetPlaysTime();
-                    videotime.push(respDateTime);
-                }
-                else if (videos.length == 1) {
-                    var respDateTime = GetPlaysTime();
-                    videotime.push(respDateTime);
-                }
-                else if (videos.length == 0) {
-                    isLoadWindow = 1;
-                    loopIndex++;
-
-                }
-            });
+            else {
+                console.log("Time is up");
+                //alert("Your Business Hours are Completed");
+                setInterval(playMovie, 300000, null, videos, options, startTime, endTime);
+            }
         }
         function GetPlaysTime() {
             var date = new Date();
             FormatedDate = moment(date).format("yyyy-MM-DDTHH:mm:ss");
-            alert(FormatedDate);
+            //alert(FormatedDate);
             return FormatedDate;
         }
 
@@ -111,7 +145,7 @@
             width: "1300",
             height: "650"
         };
-        playMovie(null, videos, options);
+        playMovie(null, videos, options, startTime, endTime);
     </script>
 </body>
 </html>

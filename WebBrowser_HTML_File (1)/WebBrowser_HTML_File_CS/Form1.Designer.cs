@@ -50,7 +50,7 @@
             this.Controls.Add(this.webBrowser1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Smoke Shop Video(Updated)";
+            this.Text = "Smoke Shop Vimeo(Updated)";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
