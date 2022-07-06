@@ -21,11 +21,11 @@ namespace WebBrowser_HTML_File_CS
             yrversion = yrversion + 1;
             if (File.Exists("UGUID"))
             {
-                Application.Run(new LoginScreen());
+                Application.Run(new NewDateScreen());
             }
             else
             {
-                Application.Run(new NewDateScreen());
+                Application.Run(new LoginScreen());
             }
         }
     }
