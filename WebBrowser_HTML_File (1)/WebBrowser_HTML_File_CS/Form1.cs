@@ -14,6 +14,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Runtime.InteropServices;
 using Microsoft.Win32;
+using System.Threading.Tasks;
 
 namespace WebBrowser_HTML_File_CS
 {
@@ -311,5 +312,29 @@ namespace WebBrowser_HTML_File_CS
             }
             return stoptime;
         }
-    }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            NewDateScreen newDateScreen = new NewDateScreen();
+            newDateScreen.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        public void Exit()
+        {
+            Application.Exit();
+        }
+        public async Task openDateScreen()
+        {
+            this.Close();
+            NewDateScreen newDateScreen = new NewDateScreen();
+            newDateScreen.Show();
+            
+        }
+
+        }
 }
