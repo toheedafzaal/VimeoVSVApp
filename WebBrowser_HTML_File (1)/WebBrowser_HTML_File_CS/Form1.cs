@@ -333,8 +333,6 @@ namespace WebBrowser_HTML_File_CS
             this.Close();
             NewDateScreen newDateScreen = new NewDateScreen();
             newDateScreen.Show();
-            
         }
-
         }
 }

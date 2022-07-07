@@ -37,7 +37,7 @@
 
 <body>
 
-    <div id="video-container"><div><button onclick="Exit()" class="btn"><i class="fa fa-close"></i> Close</button>&nbsp&nbsp&nbsp&nbsp<button onclick="openDateScreen()" class="btn"><i class="fa fa-calendar"></i> Date Screen</button></div></div>
+    <div id="video-container"><div><button onclick="Exit()" class="btn"><i class="fa fa-close"></i> Close</button>&nbsp&nbsp&nbsp&nbsp<!--<button onclick="openDateScreen()" class="btn"><i class="fa fa-calendar"></i> Date Screen</button>--></div></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
 
@@ -71,12 +71,17 @@
         var playMovie = function (player, videos, options, startTime, endTime) { // get startTime and endTime
             // get currentTime here
             //debugger;
+            ssDbTime = window.external.getStartTime();
+            eeDbTime = window.external.getEndTime();
+            sDbTime = "T";
+            sDbTime += ssDbTime;
+            startTime = new Date(nowDate + sDbTime);
+            eDbTime = "T";
+            eDbTime += eeDbTime;
+            endTime = new Date(nowDate + eDbTime);
             now = new Date();
             currentTime = now.toISOString();
-            nowDate = currentTime.split('T')[1];
-            console.log(Date.parse(currentTime));
-            console.log(Date.parse(startTime));
-            console.log(Date.parse(endTime));
+            nowDate = currentTime.split('T')[0];
             // add if-else to check for currentTime is between startTime and endTime
             if (Date.parse(currentTime) > Date.parse(startTime) && Date.parse(currentTime) < Date.parse(endTime)) {
                 if (!videos.length) {
@@ -155,8 +160,8 @@
             return FormatedDate;
         }
         var options = {
-            width: "1300",
-            height: "650"
+            width: "1400",
+            height: "700"
         };
         playMovie(null, videos, options, startTime, endTime);
         function Exit() {
