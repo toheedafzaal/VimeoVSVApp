@@ -37,14 +37,25 @@ namespace WebBrowser_HTML_File_CS
 
                 if (dr.Read())
                 {
+                    string root = @"C:\Temp";
+                    string subdir = @"C:\Temp\SmSpVimeo";
+                    // If directory does not exist, create it. 
+                    if (!Directory.Exists(root))
+                    {
+                        Directory.CreateDirectory(root);
+                    }
+                    if (!Directory.Exists(subdir))
+                    {
+                        Directory.CreateDirectory(subdir);
+                    }
                     dr.Close();
                     //if (File.Exists("UGUID")) return;
-                    if (File.Exists("UserNameFile.txt"))
+                    if (File.Exists(@"C:\Temp\SmSpVimeo\dontDelete.txt"))
                     {
-                        File.Delete("UserNameFile.txt");
+                        File.Delete(@"C:\Temp\SmSpVimeo\dontDelete.txt");
                     }
-                    File.Create("UGUID");
-                    string fileName = @"UserNameFile.txt";
+                    //File.Create("UGUID");
+                    string fileName = @"C:\Temp\SmSpVimeo\dontDelete.txt";
                     FileInfo fi = new FileInfo(fileName);
                     using (StreamWriter sw = fi.CreateText())
                     {

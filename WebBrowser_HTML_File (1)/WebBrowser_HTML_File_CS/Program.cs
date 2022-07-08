@@ -19,7 +19,8 @@ namespace WebBrowser_HTML_File_CS
             //File.Delete("UGUID");
             var yrversion = Application.ProductVersion;
             yrversion = yrversion + 1;
-            if (File.Exists("UGUID"))
+            //@"C:\Temp\SmSpVimeo\dontDelete.txt"
+            if (File.Exists(@"C:\Temp\SmSpVimeo\dontDelete.txt"))
             {
                 Application.Run(new Form1());
             }
