@@ -76,7 +76,7 @@ namespace WebBrowser_HTML_File_CS
             private void button1_Click(object sender, EventArgs e)
         {
             //var userid = LoginScreen.vimeoUserId;
-            string fileName = @"UserNameFile.txt";
+            string fileName = @"C:\Temp\SmSpVimeo\dontDelete.txt";
             FileInfo fi = new FileInfo(fileName);
             var uid = "";
             using (StreamReader sr = File.OpenText(fileName))

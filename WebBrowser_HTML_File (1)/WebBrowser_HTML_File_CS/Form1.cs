@@ -30,7 +30,7 @@ namespace WebBrowser_HTML_File_CS
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string fileName = @"UserNameFile.txt";
+            string fileName = @"C:\Temp\SmSpVimeo\dontDelete.txt";
             FileInfo fi = new FileInfo(fileName);
             var uid = "";
             using (StreamReader sr = File.OpenText(fileName))
