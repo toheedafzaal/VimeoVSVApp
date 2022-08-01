@@ -1,0 +1,1077 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="pubsModelStoreContainer" CdmEntityContainer="pubsEntities">
+    <EntitySetMapping Name="Rtokens">
+      <EntityTypeMapping TypeName="pubsModel.Rtoken">
+        <MappingFragment StoreEntitySet="Rtoken">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RefreshToken" ColumnName="RefreshToken" />
+          <ScalarProperty Name="IsStop" ColumnName="IsStop" />
+          <ScalarProperty Name="CreatedTimestamp" ColumnName="CreatedTimestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="pubsModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CSActiveProducts">
+      <EntityTypeMapping TypeName="pubsModel.CSActiveProduct">
+        <MappingFragment StoreEntitySet="CSActiveProducts">
+          <ScalarProperty Name="ActiveProductsID" ColumnName="ActiveProductsID" />
+          <ScalarProperty Name="LocationsID" ColumnName="LocationsID" />
+          <ScalarProperty Name="MasterCatID" ColumnName="MasterCatID" />
+          <ScalarProperty Name="SubCatID" ColumnName="SubCatID" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CSBrands">
+      <EntityTypeMapping TypeName="pubsModel.CSBrand">
+        <MappingFragment StoreEntitySet="CSBrands">
+          <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CSInventories">
+      <EntityTypeMapping TypeName="pubsModel.CSInventory">
+        <MappingFragment StoreEntitySet="CSInventory">
+          <ScalarProperty Name="InventoryID" ColumnName="InventoryID" />
+          <ScalarProperty Name="MarketID" ColumnName="MarketID" />
+          <ScalarProperty Name="MasterCatID" ColumnName="MasterCatID" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="InventoryCount" ColumnName="InventoryCount" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CSLocations">
+      <EntityTypeMapping TypeName="pubsModel.CSLocation">
+        <MappingFragment StoreEntitySet="CSLocations">
+          <ScalarProperty Name="LocationsID" ColumnName="LocationsID" />
+          <ScalarProperty Name="LocationsName" ColumnName="LocationsName" />
+          <ScalarProperty Name="RecPeriod" ColumnName="RecPeriod" />
+          <ScalarProperty Name="MarketID" ColumnName="MarketID" />
+          <ScalarProperty Name="SpecialPricing" ColumnName="SpecialPricing" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="CityStateZip" ColumnName="CityStateZip" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="QBCustomerName" ColumnName="QBCustomerName" />
+          <ScalarProperty Name="SavedReconcile" ColumnName="SavedReconcile" />
+          <ScalarProperty Name="RollUpPeriod" ColumnName="RollUpPeriod" />
+          <ScalarProperty Name="RME60" ColumnName="RME60" />
+          <ScalarProperty Name="DISTRO60" ColumnName="DISTRO60" />
+          <ScalarProperty Name="DISTRO100" ColumnName="DISTRO100" />
+          <ScalarProperty Name="DISTRO120" ColumnName="DISTRO120" />
+          <ScalarProperty Name="RMEsalts" ColumnName="RMEsalts" />
+          <ScalarProperty Name="DISTROsalts" ColumnName="DISTROsalts" />
+          <ScalarProperty Name="CBD" ColumnName="CBD" />
+          <ScalarProperty Name="Kratom" ColumnName="Kratom" />
+          <ScalarProperty Name="Accessories" ColumnName="Accessories" />
+          <ScalarProperty Name="Hardware" ColumnName="Hardware" />
+          <ScalarProperty Name="PrefilledPods" ColumnName="PrefilledPods" />
+          <ScalarProperty Name="fourtwenty" ColumnName="fourtwenty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CSMarkets">
+      <EntityTypeMapping TypeName="pubsModel.CSMarket">
+        <MappingFragment StoreEntitySet="CSMarkets">
+          <ScalarProperty Name="MarketsID" ColumnName="MarketsID" />
+          <ScalarProperty Name="MarketName" ColumnName="MarketName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CSMasterCats">
+      <EntityTypeMapping TypeName="pubsModel.CSMasterCat">
+        <MappingFragment StoreEntitySet="CSMasterCat">
+          <ScalarProperty Name="MasterCatID" ColumnName="MasterCatID" />
+          <ScalarProperty Name="MasterCatName" ColumnName="MasterCatName" />
+          <ScalarProperty Name="SubCat" ColumnName="SubCat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CSProducts">
+      <EntityTypeMapping TypeName="pubsModel.CSProduct">
+        <MappingFragment StoreEntitySet="CSProducts">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="MasterCatID" ColumnName="MasterCatID" />
+          <ScalarProperty Name="SubCatID" ColumnName="SubCatID" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="Consignment" ColumnName="Consignment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CSReconciles">
+      <EntityTypeMapping TypeName="pubsModel.CSReconcile">
+        <MappingFragment StoreEntitySet="CSReconcile">
+          <ScalarProperty Name="ReconcileID" ColumnName="ReconcileID" />
+          <ScalarProperty Name="LocationsID" ColumnName="LocationsID" />
+          <ScalarProperty Name="RecPeriod" ColumnName="RecPeriod" />
+          <ScalarProperty Name="RecDate" ColumnName="RecDate" />
+          <ScalarProperty Name="AddDeductOnly" ColumnName="AddDeductOnly" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="WalkInCount" ColumnName="WalkInCount" />
+          <ScalarProperty Name="NumSold" ColumnName="NumSold" />
+          <ScalarProperty Name="NumAdd" ColumnName="NumAdd" />
+          <ScalarProperty Name="NumDeduct" ColumnName="NumDeduct" />
+          <ScalarProperty Name="WalkOutCount" ColumnName="WalkOutCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CSReconcileCloses">
+      <EntityTypeMapping TypeName="pubsModel.CSReconcileClose">
+        <MappingFragment StoreEntitySet="CSReconcileClose">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="LocationsId" ColumnName="LocationsId" />
+          <ScalarProperty Name="LocationsName" ColumnName="LocationsName" />
+          <ScalarProperty Name="RecPeriod" ColumnName="RecPeriod" />
+          <ScalarProperty Name="SavedReconcile" ColumnName="SavedReconcile" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CSRollups">
+      <EntityTypeMapping TypeName="pubsModel.CSRollup">
+        <MappingFragment StoreEntitySet="CSRollup">
+          <ScalarProperty Name="RollUpID" ColumnName="RollUpID" />
+          <ScalarProperty Name="MarketID" ColumnName="MarketID" />
+          <ScalarProperty Name="LocationsID" ColumnName="LocationsID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="DMYA" ColumnName="DMYA" />
+          <ScalarProperty Name="RUDate" ColumnName="RUDate" />
+          <ScalarProperty Name="RUMonth" ColumnName="RUMonth" />
+          <ScalarProperty Name="RUYear" ColumnName="RUYear" />
+          <ScalarProperty Name="MasterCatID" ColumnName="MasterCatID" />
+          <ScalarProperty Name="SubCatID" ColumnName="SubCatID" />
+          <ScalarProperty Name="StockValue" ColumnName="StockValue" />
+          <ScalarProperty Name="Gross" ColumnName="Gross" />
+          <ScalarProperty Name="Net" ColumnName="Net" />
+          <ScalarProperty Name="NumAdd" ColumnName="NumAdd" />
+          <ScalarProperty Name="NumSold" ColumnName="NumSold" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CSSpecialPricings">
+      <EntityTypeMapping TypeName="pubsModel.CSSpecialPricing">
+        <MappingFragment StoreEntitySet="CSSpecialPricing">
+          <ScalarProperty Name="SpecialPricingID" ColumnName="SpecialPricingID" />
+          <ScalarProperty Name="LocationsID" ColumnName="LocationsID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="Consignment" ColumnName="Consignment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CSSubCats">
+      <EntityTypeMapping TypeName="pubsModel.CSSubCat">
+        <MappingFragment StoreEntitySet="CSSubCat">
+          <ScalarProperty Name="SubCatID" ColumnName="SubCatID" />
+          <ScalarProperty Name="MasterCatID" ColumnName="MasterCatID" />
+          <ScalarProperty Name="SubCatName" ColumnName="SubCatName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CSUsers">
+      <EntityTypeMapping TypeName="pubsModel.CSUser">
+        <MappingFragment StoreEntitySet="CSUser">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="StreetAddress1" ColumnName="StreetAddress1" />
+          <ScalarProperty Name="StreetAddress2" ColumnName="StreetAddress2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="MarketID" ColumnName="MarketID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GeneralSettings">
+      <EntityTypeMapping TypeName="pubsModel.GeneralSetting">
+        <MappingFragment StoreEntitySet="GeneralSetting">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Key" ColumnName="Key" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GWYWmemberfaves">
+      <EntityTypeMapping TypeName="pubsModel.GWYWmemberfave">
+        <MappingFragment StoreEntitySet="GWYWmemberfaves">
+          <ScalarProperty Name="MemberFaveID" ColumnName="MemberFaveID" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="ShopID" ColumnName="ShopID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GWYWmembers">
+      <EntityTypeMapping TypeName="pubsModel.GWYWmember">
+        <MappingFragment StoreEntitySet="GWYWmembers">
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="CellNumber" ColumnName="CellNumber" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="StreetAddress1" ColumnName="StreetAddress1" />
+          <ScalarProperty Name="StreetAddress2" ColumnName="StreetAddress2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="ZipPlus5" ColumnName="ZipPlus5" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GWYWnamegenders">
+      <EntityTypeMapping TypeName="pubsModel.GWYWnamegender">
+        <MappingFragment StoreEntitySet="GWYWnamegender">
+          <ScalarProperty Name="NameID" ColumnName="NameID" />
+          <ScalarProperty Name="NameValue" ColumnName="NameValue" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GWYWshops">
+      <EntityTypeMapping TypeName="pubsModel.GWYWshop">
+        <MappingFragment StoreEntitySet="GWYWshops">
+          <ScalarProperty Name="ShopID" ColumnName="ShopID" />
+          <ScalarProperty Name="ShopName" ColumnName="ShopName" />
+          <ScalarProperty Name="BMorONLINE" ColumnName="BMorONLINE" />
+          <ScalarProperty Name="ShopType" ColumnName="ShopType" />
+          <ScalarProperty Name="ShopGender" ColumnName="ShopGender" />
+          <ScalarProperty Name="GiftCard" ColumnName="GiftCard" />
+          <ScalarProperty Name="GiftCardImageName" ColumnName="GiftCardImageName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GWYWwishitems">
+      <EntityTypeMapping TypeName="pubsModel.GWYWwishitem">
+        <MappingFragment StoreEntitySet="GWYWwishitems">
+          <ScalarProperty Name="WishItemID" ColumnName="WishItemID" />
+          <ScalarProperty Name="WishListID" ColumnName="WishListID" />
+          <ScalarProperty Name="ItemType" ColumnName="ItemType" />
+          <ScalarProperty Name="ShopID" ColumnName="ShopID" />
+          <ScalarProperty Name="ShopName" ColumnName="ShopName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GWYWwishlists">
+      <EntityTypeMapping TypeName="pubsModel.GWYWwishlist">
+        <MappingFragment StoreEntitySet="GWYWwishlist">
+          <ScalarProperty Name="WishListID" ColumnName="WishListID" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="WLName" ColumnName="WLName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoices">
+      <EntityTypeMapping TypeName="pubsModel.Invoice">
+        <MappingFragment StoreEntitySet="Invoice">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="LocationsId" ColumnName="LocationsId" />
+          <ScalarProperty Name="AddDeductOnly" ColumnName="AddDeductOnly" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="InvoiceFilePath" ColumnName="InvoiceFilePath" />
+          <ScalarProperty Name="ReportFIlePath" ColumnName="ReportFIlePath" />
+          <ScalarProperty Name="BillToName" ColumnName="BillToName" />
+          <ScalarProperty Name="BillToAddress" ColumnName="BillToAddress" />
+          <ScalarProperty Name="ShipToName" ColumnName="ShipToName" />
+          <ScalarProperty Name="ShipToAddress" ColumnName="ShipToAddress" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JuiceClubs">
+      <EntityTypeMapping TypeName="pubsModel.JuiceClub">
+        <MappingFragment StoreEntitySet="JuiceClub">
+          <ScalarProperty Name="Recordid" ColumnName="Recordid" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="SalesID" ColumnName="SalesID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="NumberOfMonths" ColumnName="NumberOfMonths" />
+          <ScalarProperty Name="MembershipLevel" ColumnName="MembershipLevel" />
+          <ScalarProperty Name="JF1" ColumnName="JF1" />
+          <ScalarProperty Name="BS1" ColumnName="BS1" />
+          <ScalarProperty Name="NS1" ColumnName="NS1" />
+          <ScalarProperty Name="JF2" ColumnName="JF2" />
+          <ScalarProperty Name="BS2" ColumnName="BS2" />
+          <ScalarProperty Name="NS2" ColumnName="NS2" />
+          <ScalarProperty Name="JF3" ColumnName="JF3" />
+          <ScalarProperty Name="BS3" ColumnName="BS3" />
+          <ScalarProperty Name="NS3" ColumnName="NS3" />
+          <ScalarProperty Name="JF4" ColumnName="JF4" />
+          <ScalarProperty Name="BS4" ColumnName="BS4" />
+          <ScalarProperty Name="NS4" ColumnName="NS4" />
+          <ScalarProperty Name="JF5" ColumnName="JF5" />
+          <ScalarProperty Name="BS5" ColumnName="BS5" />
+          <ScalarProperty Name="NS5" ColumnName="NS5" />
+          <ScalarProperty Name="JF6" ColumnName="JF6" />
+          <ScalarProperty Name="BS6" ColumnName="BS6" />
+          <ScalarProperty Name="NS6" ColumnName="NS6" />
+          <ScalarProperty Name="JF7" ColumnName="JF7" />
+          <ScalarProperty Name="BS7" ColumnName="BS7" />
+          <ScalarProperty Name="NS7" ColumnName="NS7" />
+          <ScalarProperty Name="JF8" ColumnName="JF8" />
+          <ScalarProperty Name="BS8" ColumnName="BS8" />
+          <ScalarProperty Name="NS8" ColumnName="NS8" />
+          <ScalarProperty Name="JF9" ColumnName="JF9" />
+          <ScalarProperty Name="BS9" ColumnName="BS9" />
+          <ScalarProperty Name="NS9" ColumnName="NS9" />
+          <ScalarProperty Name="JF10" ColumnName="JF10" />
+          <ScalarProperty Name="BS10" ColumnName="BS10" />
+          <ScalarProperty Name="NS10" ColumnName="NS10" />
+          <ScalarProperty Name="JF11" ColumnName="JF11" />
+          <ScalarProperty Name="BS11" ColumnName="BS11" />
+          <ScalarProperty Name="NS11" ColumnName="NS11" />
+          <ScalarProperty Name="JF12" ColumnName="JF12" />
+          <ScalarProperty Name="BS12" ColumnName="BS12" />
+          <ScalarProperty Name="NS12" ColumnName="NS12" />
+          <ScalarProperty Name="JF13" ColumnName="JF13" />
+          <ScalarProperty Name="BS13" ColumnName="BS13" />
+          <ScalarProperty Name="NS13" ColumnName="NS13" />
+          <ScalarProperty Name="JF14" ColumnName="JF14" />
+          <ScalarProperty Name="BS14" ColumnName="BS14" />
+          <ScalarProperty Name="NS14" ColumnName="NS14" />
+          <ScalarProperty Name="JF15" ColumnName="JF15" />
+          <ScalarProperty Name="BS15" ColumnName="BS15" />
+          <ScalarProperty Name="NS15" ColumnName="NS15" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JuiceStations">
+      <EntityTypeMapping TypeName="pubsModel.JuiceStation">
+        <MappingFragment StoreEntitySet="JuiceStation">
+          <ScalarProperty Name="Recordid" ColumnName="Recordid" />
+          <ScalarProperty Name="JuiceName" ColumnName="JuiceName" />
+          <ScalarProperty Name="JuiceDescription" ColumnName="JuiceDescription" />
+          <ScalarProperty Name="Vendor" ColumnName="Vendor" />
+          <ScalarProperty Name="Lenexa" ColumnName="Lenexa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Markets">
+      <EntityTypeMapping TypeName="pubsModel.Market">
+        <MappingFragment StoreEntitySet="Market">
+          <ScalarProperty Name="City" ColumnName="City" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="pubsModel.Product">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="StockCount" ColumnName="StockCount" />
+          <ScalarProperty Name="ProductDescrip" ColumnName="ProductDescrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VCcustomers">
+      <EntityTypeMapping TypeName="pubsModel.VCcustomer">
+        <MappingFragment StoreEntitySet="VCcustomer">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="AssociateID" ColumnName="AssociateID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="StreetAddress" ColumnName="StreetAddress" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="SocialSecurityNumber" ColumnName="SocialSecurityNumber" />
+          <ScalarProperty Name="FedTaxIdNumber" ColumnName="FedTaxIdNumber" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="JoinDate" ColumnName="JoinDate" />
+          <ScalarProperty Name="VaporRoomJoinDate" ColumnName="VaporRoomJoinDate" />
+          <ScalarProperty Name="VaporGroup" ColumnName="VaporGroup" />
+          <ScalarProperty Name="LastActivity" ColumnName="LastActivity" />
+          <ScalarProperty Name="PaypalEmail" ColumnName="PaypalEmail" />
+          <ScalarProperty Name="RetailOrAssociate" ColumnName="RetailOrAssociate" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VCcustomer_test">
+      <EntityTypeMapping TypeName="pubsModel.VCcustomer_test">
+        <MappingFragment StoreEntitySet="VCcustomer_test">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="AssociateID" ColumnName="AssociateID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="StreetAddress" ColumnName="StreetAddress" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="SocialSecurityNumber" ColumnName="SocialSecurityNumber" />
+          <ScalarProperty Name="FedTaxIdNumber" ColumnName="FedTaxIdNumber" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="JoinDate" ColumnName="JoinDate" />
+          <ScalarProperty Name="VaporRoomJoinDate" ColumnName="VaporRoomJoinDate" />
+          <ScalarProperty Name="VaporGroup" ColumnName="VaporGroup" />
+          <ScalarProperty Name="LastActivity" ColumnName="LastActivity" />
+          <ScalarProperty Name="PaypalEmail" ColumnName="PaypalEmail" />
+          <ScalarProperty Name="RetailOrAssociate" ColumnName="RetailOrAssociate" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VCJuices">
+      <EntityTypeMapping TypeName="pubsModel.VCJuice">
+        <MappingFragment StoreEntitySet="VCJuice">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="SubID" ColumnName="SubID" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="NIC" ColumnName="NIC" />
+          <ScalarProperty Name="StockCount" ColumnName="StockCount" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VCKits">
+      <EntityTypeMapping TypeName="pubsModel.VCKit">
+        <MappingFragment StoreEntitySet="VCKit">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="SubID" ColumnName="SubID" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="StockCount" ColumnName="StockCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VCProducts">
+      <EntityTypeMapping TypeName="pubsModel.VCProduct">
+        <MappingFragment StoreEntitySet="VCProducts">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="StockCount" ColumnName="StockCount" />
+          <ScalarProperty Name="ProductDescrip" ColumnName="ProductDescrip" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VCSales">
+      <EntityTypeMapping TypeName="pubsModel.VCSale">
+        <MappingFragment StoreEntitySet="VCSales">
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="AssociateID" ColumnName="AssociateID" />
+          <ScalarProperty Name="UplineAssociateID" ColumnName="UplineAssociateID" />
+          <ScalarProperty Name="SubTotal" ColumnName="SubTotal" />
+          <ScalarProperty Name="SalesTax" ColumnName="SalesTax" />
+          <ScalarProperty Name="Shipping" ColumnName="Shipping" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
+          <ScalarProperty Name="AssocStock" ColumnName="AssocStock" />
+          <ScalarProperty Name="ShipDate" ColumnName="ShipDate" />
+          <ScalarProperty Name="AssocCom" ColumnName="AssocCom" />
+          <ScalarProperty Name="UplineAssocCom" ColumnName="UplineAssocCom" />
+          <ScalarProperty Name="CompanyCom" ColumnName="CompanyCom" />
+          <ScalarProperty Name="OrderComplete" ColumnName="OrderComplete" />
+          <ScalarProperty Name="Paypal_InvoiceID" ColumnName="Paypal_InvoiceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VCSalesItems">
+      <EntityTypeMapping TypeName="pubsModel.VCSalesItem">
+        <MappingFragment StoreEntitySet="VCSalesItems">
+          <ScalarProperty Name="SalesItemsID" ColumnName="SalesItemsID" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+          <ScalarProperty Name="ProductSubID" ColumnName="ProductSubID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VCTempOrders">
+      <EntityTypeMapping TypeName="pubsModel.VCTempOrder">
+        <MappingFragment StoreEntitySet="VCTempOrder">
+          <ScalarProperty Name="entryid" ColumnName="entryid" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="orderdate" ColumnName="orderdate" />
+          <ScalarProperty Name="subtotal" ColumnName="subtotal" />
+          <ScalarProperty Name="shiptotal" ColumnName="shiptotal" />
+          <ScalarProperty Name="taxtotal" ColumnName="taxtotal" />
+          <ScalarProperty Name="invtotal" ColumnName="invtotal" />
+          <ScalarProperty Name="discounttotal" ColumnName="discounttotal" />
+          <ScalarProperty Name="ordercompleteddate" ColumnName="ordercompleteddate" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VCTempOrderDetails">
+      <EntityTypeMapping TypeName="pubsModel.VCTempOrderDetail">
+        <MappingFragment StoreEntitySet="VCTempOrderDetail">
+          <ScalarProperty Name="entryid" ColumnName="entryid" />
+          <ScalarProperty Name="temp_oid" ColumnName="temp_oid" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+          <ScalarProperty Name="ProductSubID" ColumnName="ProductSubID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="discount" ColumnName="discount" />
+          <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+          <ScalarProperty Name="dateadded" ColumnName="dateadded" />
+          <ScalarProperty Name="tax" ColumnName="tax" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VSVAccounts">
+      <EntityTypeMapping TypeName="pubsModel.VSVAccount">
+        <MappingFragment StoreEntitySet="VSVAccount">
+          <ScalarProperty Name="VSVAccountID" ColumnName="VSVAccountID" />
+          <ScalarProperty Name="AcctName" ColumnName="AcctName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="SamplesAddress1" ColumnName="SamplesAddress1" />
+          <ScalarProperty Name="SamplesAddress2" ColumnName="SamplesAddress2" />
+          <ScalarProperty Name="SamplesCity" ColumnName="SamplesCity" />
+          <ScalarProperty Name="SamplesState" ColumnName="SamplesState" />
+          <ScalarProperty Name="SamplesZip" ColumnName="SamplesZip" />
+          <ScalarProperty Name="DMPhone" ColumnName="DMPhone" />
+          <ScalarProperty Name="DMName" ColumnName="DMName" />
+          <ScalarProperty Name="DMEmail" ColumnName="DMEmail" />
+          <ScalarProperty Name="SamplesNICLevel" ColumnName="SamplesNICLevel" />
+          <ScalarProperty Name="GMT" ColumnName="GMT" />
+          <ScalarProperty Name="MonStart" ColumnName="MonStart" />
+          <ScalarProperty Name="MonStop" ColumnName="MonStop" />
+          <ScalarProperty Name="TueStart" ColumnName="TueStart" />
+          <ScalarProperty Name="TueStop" ColumnName="TueStop" />
+          <ScalarProperty Name="WedStart" ColumnName="WedStart" />
+          <ScalarProperty Name="WedStop" ColumnName="WedStop" />
+          <ScalarProperty Name="ThurStart" ColumnName="ThurStart" />
+          <ScalarProperty Name="ThurStop" ColumnName="ThurStop" />
+          <ScalarProperty Name="FriStart" ColumnName="FriStart" />
+          <ScalarProperty Name="FriStop" ColumnName="FriStop" />
+          <ScalarProperty Name="SatStart" ColumnName="SatStart" />
+          <ScalarProperty Name="SatStop" ColumnName="SatStop" />
+          <ScalarProperty Name="SunStart" ColumnName="SunStart" />
+          <ScalarProperty Name="SunStop" ColumnName="SunStop" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VSVaccountprodvideos">
+      <EntityTypeMapping TypeName="pubsModel.VSVaccountprodvideo">
+        <MappingFragment StoreEntitySet="VSVaccountprodvideo">
+          <ScalarProperty Name="VSVAccountID" ColumnName="VSVAccountID" />
+          <ScalarProperty Name="AccountVidID" ColumnName="AccountVidID" />
+          <ScalarProperty Name="VidID" ColumnName="VidID" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="Shown" ColumnName="Shown" />
+          <ScalarProperty Name="VSVLocationID" ColumnName="VSVLocationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VSVAccountProdVideo_bk">
+      <EntityTypeMapping TypeName="pubsModel.VSVAccountProdVideo_bk">
+        <MappingFragment StoreEntitySet="VSVAccountProdVideo_bk">
+          <ScalarProperty Name="VSVAccountID" ColumnName="VSVAccountID" />
+          <ScalarProperty Name="AccountVidID" ColumnName="AccountVidID" />
+          <ScalarProperty Name="VidID" ColumnName="VidID" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="Shown" ColumnName="Shown" />
+          <ScalarProperty Name="VSVLocationID" ColumnName="VSVLocationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VSVArtists">
+      <EntityTypeMapping TypeName="pubsModel.VSVArtist">
+        <MappingFragment StoreEntitySet="VSVArtist">
+          <ScalarProperty Name="ArtistID" ColumnName="ArtistID" />
+          <ScalarProperty Name="MusicID" ColumnName="MusicID" />
+          <ScalarProperty Name="ArtistName" ColumnName="ArtistName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VSVBrands">
+      <EntityTypeMapping TypeName="pubsModel.VSVBrand">
+        <MappingFragment StoreEntitySet="VSVBrands">
+          <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="ManID" ColumnName="ManID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VSVEntertainmentVideos">
+      <EntityTypeMapping TypeName="pubsModel.VSVEntertainmentVideo">
+        <MappingFragment StoreEntitySet="VSVEntertainmentVideo">
+          <ScalarProperty Name="EVID" ColumnName="EVID" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VSVEntertainmentVideo1">
+      <EntityTypeMapping TypeName="pubsModel.VSVEntertainmentVideo1">
+        <MappingFragment StoreEntitySet="VSVEntertainmentVideo1">
+          <ScalarProperty Name="EVID" ColumnName="EVID" />
+          <ScalarProperty Name="MGID" ColumnName="MGID" />
+          <ScalarProperty Name="MusicID" ColumnName="MusicID" />
+          <ScalarProperty Name="ArtistID" ColumnName="ArtistID" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VSVLocations">
+      <EntityTypeMapping TypeName="pubsModel.VSVLocation">
+        <MappingFragment StoreEntitySet="VSVLocations">
+          <ScalarProperty Name="VSVAccountID" ColumnName="VSVAccountID" />
+          <ScalarProperty Name="VSVLocationID" ColumnName="VSVLocationID" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+          <ScalarProperty Name="YouTubeChannel" ColumnName="YouTubeChannel" />
+          <ScalarProperty Name="ShuffleRatio" ColumnName="ShuffleRatio" />
+          <ScalarProperty Name="ShuffleRatioProduct" ColumnName="ShuffleRatioProduct" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VSVManufacturers">
+      <EntityTypeMapping TypeName="pubsModel.VSVManufacturer">
+        <MappingFragment StoreEntitySet="VSVManufacturer">
+          <ScalarProperty Name="ManID" ColumnName="ManID" />
+          <ScalarProperty Name="ManName" ColumnName="ManName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="SampleEmail" ColumnName="SampleEmail" />
+          <ScalarProperty Name="PromoEmail" ColumnName="PromoEmail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VSVMasterGenres">
+      <EntityTypeMapping TypeName="pubsModel.VSVMasterGenre">
+        <MappingFragment StoreEntitySet="VSVMasterGenre">
+          <ScalarProperty Name="MGID" ColumnName="MGID" />
+          <ScalarProperty Name="GenreName" ColumnName="GenreName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VSVMusicGenres">
+      <EntityTypeMapping TypeName="pubsModel.VSVMusicGenre">
+        <MappingFragment StoreEntitySet="VSVMusicGenre">
+          <ScalarProperty Name="MusicID" ColumnName="MusicID" />
+          <ScalarProperty Name="GenreName" ColumnName="GenreName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VSVPlays">
+      <EntityTypeMapping TypeName="pubsModel.VSVPlay">
+        <MappingFragment StoreEntitySet="VSVPlays">
+          <ScalarProperty Name="VSVPlayID" ColumnName="VSVPlayID" />
+          <ScalarProperty Name="VSVAccountID" ColumnName="VSVAccountID" />
+          <ScalarProperty Name="VSVLocationID" ColumnName="VSVLocationID" />
+          <ScalarProperty Name="VidID" ColumnName="VidID" />
+          <ScalarProperty Name="PlayTimeStamp" ColumnName="PlayTimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VSVPlaySummaries">
+      <EntityTypeMapping TypeName="pubsModel.VSVPlaySummary">
+        <MappingFragment StoreEntitySet="VSVPlaySummary">
+          <ScalarProperty Name="PlaySummaryID" ColumnName="PlaySummaryID" />
+          <ScalarProperty Name="ManID" ColumnName="ManID" />
+          <ScalarProperty Name="VidID" ColumnName="VidID" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="PlayCount" ColumnName="PlayCount" />
+          <ScalarProperty Name="dateSummary" ColumnName="dateSummary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VSVProducts">
+      <EntityTypeMapping TypeName="pubsModel.VSVProduct">
+        <MappingFragment StoreEntitySet="VSVProducts">
+          <ScalarProperty Name="VidID" ColumnName="VidID" />
+          <ScalarProperty Name="ProdType" ColumnName="ProdType" />
+          <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Private" ColumnName="Private" />
+          <ScalarProperty Name="PrivateVSVAccountID" ColumnName="PrivateVSVAccountID" />
+          <ScalarProperty Name="HardwareSubType" ColumnName="HardwareSubType" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="eLiquidIntroDate" ColumnName="eLiquidIntroDate" />
+          <ScalarProperty Name="ManID" ColumnName="ManID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VSVPromoLogs">
+      <EntityTypeMapping TypeName="pubsModel.VSVPromoLog">
+        <MappingFragment StoreEntitySet="VSVPromoLog">
+          <ScalarProperty Name="LogID" ColumnName="LogID" />
+          <ScalarProperty Name="ManID" ColumnName="ManID" />
+          <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+          <ScalarProperty Name="DateStamp" ColumnName="DateStamp" />
+          <ScalarProperty Name="VSVAccountID" ColumnName="VSVAccountID" />
+          <ScalarProperty Name="TheOffer" ColumnName="TheOffer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VSVPromoRequestSummaries">
+      <EntityTypeMapping TypeName="pubsModel.VSVPromoRequestSummary">
+        <MappingFragment StoreEntitySet="VSVPromoRequestSummary">
+          <ScalarProperty Name="PromoRequestSummaryID" ColumnName="PromoRequestSummaryID" />
+          <ScalarProperty Name="ManID" ColumnName="ManID" />
+          <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="PromoRequestCount" ColumnName="PromoRequestCount" />
+          <ScalarProperty Name="dateSummary" ColumnName="dateSummary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VSVPromos">
+      <EntityTypeMapping TypeName="pubsModel.VSVPromo">
+        <MappingFragment StoreEntitySet="VSVPromos">
+          <ScalarProperty Name="PromosID" ColumnName="PromosID" />
+          <ScalarProperty Name="ManID" ColumnName="ManID" />
+          <ScalarProperty Name="PromoStart" ColumnName="PromoStart" />
+          <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+          <ScalarProperty Name="BottleSize" ColumnName="BottleSize" />
+          <ScalarProperty Name="TheOffer" ColumnName="TheOffer" />
+          <ScalarProperty Name="PromoEnd" ColumnName="PromoEnd" />
+          <ScalarProperty Name="TargetNew" ColumnName="TargetNew" />
+          <ScalarProperty Name="TargetExisting" ColumnName="TargetExisting" />
+          <ScalarProperty Name="VidID" ColumnName="VidID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VSVSampleLogs">
+      <EntityTypeMapping TypeName="pubsModel.VSVSampleLog">
+        <MappingFragment StoreEntitySet="VSVSampleLog">
+          <ScalarProperty Name="LogID" ColumnName="LogID" />
+          <ScalarProperty Name="ManID" ColumnName="ManID" />
+          <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+          <ScalarProperty Name="VidID" ColumnName="VidID" />
+          <ScalarProperty Name="DateStamp" ColumnName="DateStamp" />
+          <ScalarProperty Name="VSVAccountID" ColumnName="VSVAccountID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VSVSampleRequestSummaries">
+      <EntityTypeMapping TypeName="pubsModel.VSVSampleRequestSummary">
+        <MappingFragment StoreEntitySet="VSVSampleRequestSummary">
+          <ScalarProperty Name="SampleRequestSummaryID" ColumnName="SampleRequestSummaryID" />
+          <ScalarProperty Name="ManID" ColumnName="ManID" />
+          <ScalarProperty Name="VidID" ColumnName="VidID" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="SampleRequestCount" ColumnName="SampleRequestCount" />
+          <ScalarProperty Name="dateSummary" ColumnName="dateSummary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VSVShopIntroes">
+      <EntityTypeMapping TypeName="pubsModel.VSVShopIntro">
+        <MappingFragment StoreEntitySet="VSVShopIntro">
+          <ScalarProperty Name="ShopIntroID" ColumnName="ShopIntroID" />
+          <ScalarProperty Name="VSVAccountID" ColumnName="VSVAccountID" />
+          <ScalarProperty Name="IntroURL" ColumnName="IntroURL" />
+          <ScalarProperty Name="VSVLocationID" ColumnName="VSVLocationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VSVShopOutroes">
+      <EntityTypeMapping TypeName="pubsModel.VSVShopOutro">
+        <MappingFragment StoreEntitySet="VSVShopOutro">
+          <ScalarProperty Name="ShopOutroID" ColumnName="ShopOutroID" />
+          <ScalarProperty Name="VSVAccountID" ColumnName="VSVAccountID" />
+          <ScalarProperty Name="OutroURL" ColumnName="OutroURL" />
+          <ScalarProperty Name="VSVLocationID" ColumnName="VSVLocationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VSVShopWarnings">
+      <EntityTypeMapping TypeName="pubsModel.VSVShopWarning">
+        <MappingFragment StoreEntitySet="VSVShopWarning">
+          <ScalarProperty Name="ShopWarningID" ColumnName="ShopWarningID" />
+          <ScalarProperty Name="WarningURL" ColumnName="WarningURL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VSVStoreCountSummaries">
+      <EntityTypeMapping TypeName="pubsModel.VSVStoreCountSummary">
+        <MappingFragment StoreEntitySet="VSVStoreCountSummary">
+          <ScalarProperty Name="StoreCountSummaryID" ColumnName="StoreCountSummaryID" />
+          <ScalarProperty Name="ManID" ColumnName="ManID" />
+          <ScalarProperty Name="VidID" ColumnName="VidID" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="StoreCount" ColumnName="StoreCount" />
+          <ScalarProperty Name="dateSummary" ColumnName="dateSummary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VSVUsers">
+      <EntityTypeMapping TypeName="pubsModel.VSVUser">
+        <MappingFragment StoreEntitySet="VSVUser">
+          <ScalarProperty Name="VSVAccountID" ColumnName="VSVAccountID" />
+          <ScalarProperty Name="VSVLocationID" ColumnName="VSVLocationID" />
+          <ScalarProperty Name="VSVUserID" ColumnName="VSVUserID" />
+          <ScalarProperty Name="ListName" ColumnName="ListName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VSVuserEVids">
+      <EntityTypeMapping TypeName="pubsModel.VSVuserEVid">
+        <MappingFragment StoreEntitySet="VSVuserEVid">
+          <ScalarProperty Name="VSVUEVID" ColumnName="VSVUEVID" />
+          <ScalarProperty Name="VSVUserID" ColumnName="VSVUserID" />
+          <ScalarProperty Name="EVID" ColumnName="EVID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VSVuserVids">
+      <EntityTypeMapping TypeName="pubsModel.VSVuserVid">
+        <MappingFragment StoreEntitySet="VSVuserVid">
+          <ScalarProperty Name="UserVidID" ColumnName="UserVidID" />
+          <ScalarProperty Name="VSVUserID" ColumnName="VSVUserID" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Shown" ColumnName="Shown" />
+          <ScalarProperty Name="EVID" ColumnName="EVID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VSVuserVid_09dec2020">
+      <EntityTypeMapping TypeName="pubsModel.VSVuserVid_09dec2020">
+        <MappingFragment StoreEntitySet="VSVuserVid_09dec2020">
+          <ScalarProperty Name="UserVidID" ColumnName="UserVidID" />
+          <ScalarProperty Name="VSVUserID" ColumnName="VSVUserID" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Shown" ColumnName="Shown" />
+          <ScalarProperty Name="EVID" ColumnName="EVID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VSVuserVid1">
+      <EntityTypeMapping TypeName="pubsModel.VSVuserVid1">
+        <MappingFragment StoreEntitySet="VSVuserVid1">
+          <ScalarProperty Name="UserVidID" ColumnName="UserVidID" />
+          <ScalarProperty Name="VSVUserID" ColumnName="VSVUserID" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Shown" ColumnName="Shown" />
+          <ScalarProperty Name="EVID" ColumnName="EVID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="addtocart" FunctionName="pubsModel.Store.addtocart" />
+    <FunctionImportMapping FunctionImportName="CALLWEBSERVICE" FunctionName="pubsModel.Store.CALLWEBSERVICE" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="pubsModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="pubsModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="pubsModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="pubsModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="pubsModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="pubsModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="pubsModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="pubsModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="pubsModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="spAddToCart" FunctionName="pubsModel.Store.spAddToCart">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="pubsModel.spAddToCart_Result">
+          <ScalarProperty Name="SalesItemsID" ColumnName="SalesItemsID" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+          <ScalarProperty Name="ProductSubID" ColumnName="ProductSubID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spCheckOut" FunctionName="pubsModel.Store.spCheckOut" />
+    <FunctionImportMapping FunctionImportName="spFetchEvents" FunctionName="pubsModel.Store.spFetchEvents" />
+    <FunctionImportMapping FunctionImportName="spFetchMemberDetail" FunctionName="pubsModel.Store.spFetchMemberDetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="pubsModel.spFetchMemberDetail_Result">
+          <ScalarProperty Name="Recordid" ColumnName="Recordid" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="SalesID" ColumnName="SalesID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="NumberOfMonths" ColumnName="NumberOfMonths" />
+          <ScalarProperty Name="MembershipLevel" ColumnName="MembershipLevel" />
+          <ScalarProperty Name="JF1" ColumnName="JF1" />
+          <ScalarProperty Name="BS1" ColumnName="BS1" />
+          <ScalarProperty Name="NS1" ColumnName="NS1" />
+          <ScalarProperty Name="JF2" ColumnName="JF2" />
+          <ScalarProperty Name="BS2" ColumnName="BS2" />
+          <ScalarProperty Name="NS2" ColumnName="NS2" />
+          <ScalarProperty Name="JF3" ColumnName="JF3" />
+          <ScalarProperty Name="BS3" ColumnName="BS3" />
+          <ScalarProperty Name="NS3" ColumnName="NS3" />
+          <ScalarProperty Name="JF4" ColumnName="JF4" />
+          <ScalarProperty Name="BS4" ColumnName="BS4" />
+          <ScalarProperty Name="NS4" ColumnName="NS4" />
+          <ScalarProperty Name="JF5" ColumnName="JF5" />
+          <ScalarProperty Name="BS5" ColumnName="BS5" />
+          <ScalarProperty Name="NS5" ColumnName="NS5" />
+          <ScalarProperty Name="JF6" ColumnName="JF6" />
+          <ScalarProperty Name="BS6" ColumnName="BS6" />
+          <ScalarProperty Name="NS6" ColumnName="NS6" />
+          <ScalarProperty Name="JF7" ColumnName="JF7" />
+          <ScalarProperty Name="BS7" ColumnName="BS7" />
+          <ScalarProperty Name="NS7" ColumnName="NS7" />
+          <ScalarProperty Name="JF8" ColumnName="JF8" />
+          <ScalarProperty Name="BS8" ColumnName="BS8" />
+          <ScalarProperty Name="NS8" ColumnName="NS8" />
+          <ScalarProperty Name="JF9" ColumnName="JF9" />
+          <ScalarProperty Name="BS9" ColumnName="BS9" />
+          <ScalarProperty Name="NS9" ColumnName="NS9" />
+          <ScalarProperty Name="JF10" ColumnName="JF10" />
+          <ScalarProperty Name="BS10" ColumnName="BS10" />
+          <ScalarProperty Name="NS10" ColumnName="NS10" />
+          <ScalarProperty Name="JF11" ColumnName="JF11" />
+          <ScalarProperty Name="BS11" ColumnName="BS11" />
+          <ScalarProperty Name="NS11" ColumnName="NS11" />
+          <ScalarProperty Name="JF12" ColumnName="JF12" />
+          <ScalarProperty Name="BS12" ColumnName="BS12" />
+          <ScalarProperty Name="NS12" ColumnName="NS12" />
+          <ScalarProperty Name="JF13" ColumnName="JF13" />
+          <ScalarProperty Name="BS13" ColumnName="BS13" />
+          <ScalarProperty Name="NS13" ColumnName="NS13" />
+          <ScalarProperty Name="JF14" ColumnName="JF14" />
+          <ScalarProperty Name="BS14" ColumnName="BS14" />
+          <ScalarProperty Name="NS14" ColumnName="NS14" />
+          <ScalarProperty Name="JF15" ColumnName="JF15" />
+          <ScalarProperty Name="BS15" ColumnName="BS15" />
+          <ScalarProperty Name="NS15" ColumnName="NS15" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="shortDate" ColumnName="shortDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spFetchReport" FunctionName="pubsModel.Store.spFetchReport" />
+    <FunctionImportMapping FunctionImportName="spFetchReportAll" FunctionName="pubsModel.Store.spFetchReportAll" />
+    <FunctionImportMapping FunctionImportName="spFetchReportCBB" FunctionName="pubsModel.Store.spFetchReportCBB" />
+    <FunctionImportMapping FunctionImportName="spFetchReportCBB_20130722" FunctionName="pubsModel.Store.spFetchReportCBB_20130722" />
+    <FunctionImportMapping FunctionImportName="spFetchReportCF" FunctionName="pubsModel.Store.spFetchReportCF" />
+    <FunctionImportMapping FunctionImportName="spFetchReportConcerts" FunctionName="pubsModel.Store.spFetchReportConcerts" />
+    <FunctionImportMapping FunctionImportName="spFetchReportConcerts_20130731" FunctionName="pubsModel.Store.spFetchReportConcerts_20130731" />
+    <FunctionImportMapping FunctionImportName="spFetchReportMLB" FunctionName="pubsModel.Store.spFetchReportMLB" />
+    <FunctionImportMapping FunctionImportName="spFetchReportMLB_20130722" FunctionName="pubsModel.Store.spFetchReportMLB_20130722" />
+    <FunctionImportMapping FunctionImportName="spFetchReportMLB_V1" FunctionName="pubsModel.Store.spFetchReportMLB_V1" />
+    <FunctionImportMapping FunctionImportName="spFetchReportMLB_V2" FunctionName="pubsModel.Store.spFetchReportMLB_V2" />
+    <FunctionImportMapping FunctionImportName="spFetchReportMLS" FunctionName="pubsModel.Store.spFetchReportMLS" />
+    <FunctionImportMapping FunctionImportName="spFetchReportNBA" FunctionName="pubsModel.Store.spFetchReportNBA" />
+    <FunctionImportMapping FunctionImportName="spFetchReportNFL" FunctionName="pubsModel.Store.spFetchReportNFL" />
+    <FunctionImportMapping FunctionImportName="spFetchReportNHL" FunctionName="pubsModel.Store.spFetchReportNHL" />
+    <FunctionImportMapping FunctionImportName="spFetchSalesNFL" FunctionName="pubsModel.Store.spFetchSalesNFL" />
+    <FunctionImportMapping FunctionImportName="spFetchSalesNFL_20130827" FunctionName="pubsModel.Store.spFetchSalesNFL_20130827" />
+    <FunctionImportMapping FunctionImportName="spFetchSalesNFL_Test" FunctionName="pubsModel.Store.spFetchSalesNFL_Test" />
+    <FunctionImportMapping FunctionImportName="spFetchTicketsNFL" FunctionName="pubsModel.Store.spFetchTicketsNFL" />
+    <FunctionImportMapping FunctionImportName="spFetchTicketsNFL_20130827" FunctionName="pubsModel.Store.spFetchTicketsNFL_20130827" />
+    <FunctionImportMapping FunctionImportName="spGetCartProductList" FunctionName="pubsModel.Store.spGetCartProductList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="pubsModel.spGetCartProductList_Result">
+          <ScalarProperty Name="SalesItemsID" ColumnName="SalesItemsID" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+          <ScalarProperty Name="ProductSubID" ColumnName="ProductSubID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRemoveFromCart" FunctionName="pubsModel.Store.spRemoveFromCart">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="pubsModel.spRemoveFromCart_Result">
+          <ScalarProperty Name="SalesItemsID" ColumnName="SalesItemsID" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+          <ScalarProperty Name="ProductSubID" ColumnName="ProductSubID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spUpdateCart" FunctionName="pubsModel.Store.spUpdateCart" />
+    <FunctionImportMapping FunctionImportName="spVSVUpdatePlaySummary" FunctionName="pubsModel.Store.spVSVUpdatePlaySummary" />
+    <FunctionImportMapping FunctionImportName="spVSVUpdatePromoRequestSummary" FunctionName="pubsModel.Store.spVSVUpdatePromoRequestSummary" />
+    <FunctionImportMapping FunctionImportName="spVSVUpdateSampleRequestSummary" FunctionName="pubsModel.Store.spVSVUpdateSampleRequestSummary" />
+    <FunctionImportMapping FunctionImportName="spVSVUpdateVSVStoreCountSummary" FunctionName="pubsModel.Store.spVSVUpdateVSVStoreCountSummary" />
+  </EntityContainerMapping>
+</Mapping>
