@@ -108,7 +108,6 @@ D:\Projects\Keith\VimeoVsvEntityFrameworkAddition_2\VimeoVsvEntityFrameworkAddit
 D:\Projects\Keith\VimeoVsvEntityFrameworkAddition_2\VimeoVsvEntityFrameworkAddition\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_CS\obj\x86\Debug\VimeoVSV.exe
 D:\Projects\Keith\VimeoVsvEntityFrameworkAddition_2\VimeoVsvEntityFrameworkAddition\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_CS\obj\x86\Debug\VimeoVSV.pdb
 D:\Projects\Keith\VimeoVsvEntityFrameworkAddition_2\VimeoVsvEntityFrameworkAddition\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_CS\bin\Debug\HTML.htm
-C:\code\VimeoVsvEntityFrameworkAddition\VimeoVsvEntityFrameworkAddition\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_CS\bin\Debug\HTML.htm
 C:\code\VimeoVsvEntityFrameworkAddition\VimeoVsvEntityFrameworkAddition\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_CS\bin\Debug\VimeoVSV.exe.config
 C:\code\VimeoVsvEntityFrameworkAddition\VimeoVsvEntityFrameworkAddition\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_CS\bin\Debug\VimeoVSV.exe.manifest
 C:\code\VimeoVsvEntityFrameworkAddition\VimeoVsvEntityFrameworkAddition\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_CS\bin\Debug\VimeoVSV.application
