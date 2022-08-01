@@ -123,17 +123,19 @@ namespace WebBrowser_HTML_File_CS
             //getStartTime();
             //this.webBrowser1.ObjectForScripting = this;
             //this.webView1.ObjectForScripting = this;
-            //Assembly assembly = Assembly.GetExecutingAssembly();
-            //StreamReader reader = new StreamReader(assembly.GetManifestResourceStream("WebBrowser_HTML_File_CS.HTML.htm"));
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            StreamReader reader = new StreamReader(assembly.GetManifestResourceStream("WebBrowser_HTML_File_CS.HTML.htm"));
             //webBrowser1.DocumentText = reader.ReadToEnd();
-            string fileNameee = Application.StartupPath + "/HTML.htm";
+            //string fileNameee = Application.StartupPath + "/HTML.htm";
             //string text = File.ReadAllText(fileNameee).Replace("\"","\'");
-            string text = File.ReadAllText(fileNameee);
+            string data = reader.ReadToEnd();
+            //data = data.Replace("\"", "\'");
+            //string text = File.ReadAllText(data);
             //text = "<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN'><html><head> <title></title> <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'></head><body> <iframe src='https://player.vimeo.com/video/732628233?h=cfc16cc37a' width='640' height='442' frameborder='0' allow='autoplay; fullscreen; picture-in-picture' allowfullscreen></iframe> <script>function setDate(){alert('test');}</script></body></html>";
 
 
 
-            webView1.NavigateToString(text);
+            webView1.NavigateToString(data);
 
         }
 
