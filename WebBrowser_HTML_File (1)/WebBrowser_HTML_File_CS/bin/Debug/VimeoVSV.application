@@ -11,17 +11,17 @@
     <deploymentProvider codebase="https://raw.githubusercontent.com/toheedafzaal/VimeoVSVApp/main/published/VimeoVSV.application" />
   </deployment>
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="VimeoVSV.exe.manifest" size="5050">
+    <dependentAssembly dependencyType="install" codebase="VimeoVSV.exe.manifest" size="13519">
       <assemblyIdentity name="VimeoVSV.exe" version="1.0.0.13" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yJsqhQP5PMPxYnh0YN1TxOshXCBsePtnJk3R32jzpMs=</dsig:DigestValue>
+        <dsig:DigestValue>NQ2N+1JLlWZW1OSFZ8kfF4tC6v4mXxHUNkMTrPP1Lns=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

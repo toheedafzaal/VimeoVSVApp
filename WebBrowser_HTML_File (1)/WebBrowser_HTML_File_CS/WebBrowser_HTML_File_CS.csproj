@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
@@ -10,11 +10,13 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WebBrowser_HTML_File_CS</RootNamespace>
     <AssemblyName>VimeoVSV</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>true</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <PublishUrl>C:\Users\DANISH\Desktop\01-08-22 Vimeo Deployement\published\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
@@ -34,7 +36,7 @@
     <SuiteName>Toheed Afzaal</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>15</ApplicationRevision>
+    <ApplicationRevision>14</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -85,8 +87,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -97,11 +105,80 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CSActiveProduct.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CSBrand.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CSInventory.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CSLocation.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CSMarket.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CSMasterCat.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CSProduct.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CSReconcile.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CSReconcileClose.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CSRollup.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CSSpecialPricing.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CSSubCat.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CSUser.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralSetting.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GWYWmember.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GWYWmemberfave.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GWYWnamegender.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GWYWshop.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GWYWwishitem.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GWYWwishlist.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JuiceClub.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JuiceStation.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
     </Compile>
     <Compile Include="LoginScreen.cs">
       <SubType>Form</SubType>
@@ -109,14 +186,171 @@
     <Compile Include="LoginScreen.Designer.cs">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Market.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
     <Compile Include="NewDateScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NewDateScreen.Designer.cs">
       <DependentUpon>NewDateScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="pubsmodel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pubsmodel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pubsmodel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pubsmodel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pubsmodel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Rtoken.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spAddToCart_Result.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spFetchMemberDetail_Result.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetCartProductList_Result.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spRemoveFromCart_Result.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VCcustomer.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VCcustomer_test.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VCJuice.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VCKit.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VCProduct.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VCSale.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VCSalesItem.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VCTempOrder.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VCTempOrderDetail.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSVAccount.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSVaccountprodvideo.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSVAccountProdVideo_bk.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSVArtist.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSVBrand.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSVEntertainmentVideo.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSVEntertainmentVideo1.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSVLocation.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSVManufacturer.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSVMasterGenre.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSVMusicGenre.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSVPlay.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSVPlaySummary.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSVProduct.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSVPromo.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSVPromoLog.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSVPromoRequestSummary.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSVSampleLog.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSVSampleRequestSummary.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSVshopHelper.cs" />
+    <Compile Include="VSVShopIntro.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSVShopOutro.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSVShopWarning.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSVStoreCountSummary.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSVUser.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSVuserEVid.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSVuserVid.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSVuserVid1.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VSVuserVid_09dec2020.cs">
+      <DependentUpon>pubsmodel.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,12 +381,31 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EntityDeploy Include="pubsmodel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>pubsmodel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="pubsmodel.edmx.diagram">
+      <DependentUpon>pubsmodel.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="HTML.htm" />
+    <EmbeddedResource Include="HTML.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo icon.ico" />
+    <Content Include="pubsmodel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>pubsmodel.edmx</DependentUpon>
+      <LastGenOutput>pubsmodel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="pubsmodel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>pubsmodel.edmx</DependentUpon>
+      <LastGenOutput>pubsmodel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -160,6 +413,26 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EntityFramework">
+      <Version>6.4.4</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.Mvc">
+      <Version>5.2.9</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Forms.UI.Controls.WebView">
+      <Version>6.1.2</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.1</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

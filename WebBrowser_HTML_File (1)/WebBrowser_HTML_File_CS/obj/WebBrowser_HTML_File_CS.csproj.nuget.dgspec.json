@@ -1,38 +1,66 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\haier\\Desktop\\Dot NET core\\Panacealogic Office\\Vimeo Desktop Application\\16 Jun 2022 Vimeo Vsv Deployement\\WebBrowser_HTML_File (1)\\WebBrowser_HTML_File_CS\\WebBrowser_HTML_File_CS.csproj": {}
+    "C:\\code\\VimeoVsvEntityFrameworkAddition\\VimeoVsvEntityFrameworkAddition\\WebBrowser_HTML_File (1)\\WebBrowser_HTML_File_CS\\WebBrowser_HTML_File_CS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\haier\\Desktop\\Dot NET core\\Panacealogic Office\\Vimeo Desktop Application\\16 Jun 2022 Vimeo Vsv Deployement\\WebBrowser_HTML_File (1)\\WebBrowser_HTML_File_CS\\WebBrowser_HTML_File_CS.csproj": {
+    "C:\\code\\VimeoVsvEntityFrameworkAddition\\VimeoVsvEntityFrameworkAddition\\WebBrowser_HTML_File (1)\\WebBrowser_HTML_File_CS\\WebBrowser_HTML_File_CS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\haier\\Desktop\\Dot NET core\\Panacealogic Office\\Vimeo Desktop Application\\16 Jun 2022 Vimeo Vsv Deployement\\WebBrowser_HTML_File (1)\\WebBrowser_HTML_File_CS\\WebBrowser_HTML_File_CS.csproj",
+        "projectUniqueName": "C:\\code\\VimeoVsvEntityFrameworkAddition\\VimeoVsvEntityFrameworkAddition\\WebBrowser_HTML_File (1)\\WebBrowser_HTML_File_CS\\WebBrowser_HTML_File_CS.csproj",
         "projectName": "WebBrowser_HTML_File_CS",
-        "projectPath": "C:\\Users\\haier\\Desktop\\Dot NET core\\Panacealogic Office\\Vimeo Desktop Application\\16 Jun 2022 Vimeo Vsv Deployement\\WebBrowser_HTML_File (1)\\WebBrowser_HTML_File_CS\\WebBrowser_HTML_File_CS.csproj",
-        "packagesPath": "C:\\Users\\haier\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\haier\\Desktop\\Dot NET core\\Panacealogic Office\\Vimeo Desktop Application\\16 Jun 2022 Vimeo Vsv Deployement\\WebBrowser_HTML_File (1)\\WebBrowser_HTML_File_CS\\obj\\",
+        "projectPath": "C:\\code\\VimeoVsvEntityFrameworkAddition\\VimeoVsvEntityFrameworkAddition\\WebBrowser_HTML_File (1)\\WebBrowser_HTML_File_CS\\WebBrowser_HTML_File_CS.csproj",
+        "packagesPath": "C:\\Users\\DANISH\\.nuget\\packages\\",
+        "outputPath": "C:\\code\\VimeoVsvEntityFrameworkAddition\\VimeoVsvEntityFrameworkAddition\\WebBrowser_HTML_File (1)\\WebBrowser_HTML_File_CS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\haier\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DANISH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net45"
+          "net472"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net45": {
+          "net472": {
             "projectReferences": {}
           }
         }
       },
       "frameworks": {
-        "net45": {}
+        "net472": {
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.9, )"
+            },
+            "Microsoft.Toolkit.Forms.UI.Controls.WebView": {
+              "target": "Package",
+              "version": "[6.1.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "uap10.0.18362"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
       },
       "runtimes": {
         "win": {
