@@ -15,7 +15,7 @@
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>true</IsWebBootstrapper>
-    <PublishUrl>C:\Users\haier\Desktop\Dot NET core\Panacealogic Office\Vimeo Desktop Application\16 Jun 2022 Vimeo Vsv Deployement\published\</PublishUrl>
+    <PublishUrl>C:\Users\DANISH\Desktop\01-08-22 Vimeo Deployement\published\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -32,7 +32,9 @@
     <ProductName>Smoke Shop Video</ProductName>
     <PublisherName>Panacealogics</PublisherName>
     <SuiteName>Toheed Afzaal</SuiteName>
-    <ApplicationRevision>13</ApplicationRevision>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>15</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -67,7 +69,7 @@
     <ApplicationIcon>logo icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>27A84B634A9FA9DD0C773288B56651F20E5279CA</ManifestCertificateThumbprint>

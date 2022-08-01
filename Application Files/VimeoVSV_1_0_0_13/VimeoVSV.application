@@ -14,7 +14,7 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="VimeoVSV.exe.manifest" size="5050">
+    <dependentAssembly dependencyType="install" codebase="Application Files\VimeoVSV_1_0_0_13\VimeoVSV.exe.manifest" size="5050">
       <assemblyIdentity name="VimeoVSV.exe" version="1.0.0.13" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
