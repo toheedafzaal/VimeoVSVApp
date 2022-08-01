@@ -9,18 +9,15 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web;
 using System.Windows.Forms;
 
 namespace WebBrowser_HTML_File_CS
 {
     public partial class LoginScreen : Form
     {
-        private readonly pubsEntities2 pubsEntities =  new pubsEntities2();
         public LoginScreen()
         {
             InitializeComponent();
-           
         }
         public static string vimeoUserId = "";
         private void button1_Click(object sender, EventArgs e)//("insert into tblUser values('" + textBox1.Text + "', '" + textBox2.Text + "')"
@@ -40,8 +37,6 @@ namespace WebBrowser_HTML_File_CS
 
                 if (dr.Read())
                 {
-                    var data = pubsEntities.VSVAccounts.Where(x => x.UserID == textBox1.Text && x.Password ==  textBox2.Text ).Select(x => x.VSVAccountID).FirstOrDefault();
-                    
                     string root = @"C:\Temp";
                     string subdir = @"C:\Temp\SmSpVimeo";
                     // If directory does not exist, create it. 
@@ -66,23 +61,9 @@ namespace WebBrowser_HTML_File_CS
                     {
                         sw.WriteLine(textBox1.Text);
                     }
-                    string Filename = @"C:\Temp\SmSpVimeo\dontDelete2.txt";
-                    if (File.Exists(@"C:\Temp\SmSpVimeo\dontDelete2.txt"))
-                    {
-                        File.Delete(@"C:\Temp\SmSpVimeo\dontDelete2.txt");
-                    }
-                    FileInfo fii = new FileInfo(Filename);
-                    using (StreamWriter sw = fii.CreateText())
-                    {
-                        sw.WriteLine(data);
-                    }
-                    File.SetAttributes(Filename, FileAttributes.ReadOnly | FileAttributes.Hidden);
-                    File.SetAttributes(fileName, FileAttributes.ReadOnly | FileAttributes.Hidden);
-
                     //vimeoUserId = p;
                     this.Hide();
-                    Form1 form1 = new Form1();
-                    form1.Show();
+                    dateScreen.Show();
                 }
                 else
                 {

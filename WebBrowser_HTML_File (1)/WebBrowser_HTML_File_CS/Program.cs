@@ -10,15 +10,13 @@ namespace WebBrowser_HTML_File_CS
     {
         /// <summary>
         /// The main entry point for the application.
-        /// </summary
-        
+        /// </summary>
         [STAThread]
-        
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //File.Delete(@"C:\Temp\SmSpVimeo\dontDelete.txt");
+            //File.Delete("UGUID");
             var yrversion = Application.ProductVersion;
             yrversion = yrversion + 1;
             //@"C:\Temp\SmSpVimeo\dontDelete.txt"
