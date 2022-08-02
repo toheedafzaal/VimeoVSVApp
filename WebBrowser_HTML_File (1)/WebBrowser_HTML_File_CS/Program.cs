@@ -18,11 +18,12 @@ namespace WebBrowser_HTML_File_CS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //File.Delete(@"C:\Temp\SmSpVimeo\dontDelete.txt");
+            //File.Delete(@"C:\Temp\SmSpVimeo\Vimeo\dontDelete.txt");
             var yrversion = Application.ProductVersion;
             yrversion = yrversion + 1;
-            //@"C:\Temp\SmSpVimeo\dontDelete.txt"
-            if (File.Exists(@"C:\Temp\SmSpVimeo\dontDelete.txt"))
+            
+            //@"C:\Temp\SmSpVimeo\Vimeo\dontDelete.txt"
+            if (File.Exists(@"C:\Temp\SmSpVimeo\Vimeo\dontDelete.txt"))
             {
                 Application.Run(new Form1());
             }

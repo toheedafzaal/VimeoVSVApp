@@ -43,7 +43,7 @@ namespace WebBrowser_HTML_File_CS
                     var data = pubsEntities.VSVAccounts.Where(x => x.UserID == textBox1.Text && x.Password ==  textBox2.Text ).Select(x => x.VSVAccountID).FirstOrDefault();
                     
                     string root = @"C:\Temp";
-                    string subdir = @"C:\Temp\SmSpVimeo";
+                    string subdir = @"C:\Temp\SmSpVimeo\Vimeo\Vimeo";
                     // If directory does not exist, create it. 
                     if (!Directory.Exists(root))
                     {
@@ -54,23 +54,21 @@ namespace WebBrowser_HTML_File_CS
                         Directory.CreateDirectory(subdir);
                     }
                     dr.Close();
-                    //if (File.Exists("UGUID")) return;
-                    if (File.Exists(@"C:\Temp\SmSpVimeo\dontDelete.txt"))
-                    {
-                        File.Delete(@"C:\Temp\SmSpVimeo\dontDelete.txt");
-                    }
-                    //File.Create("UGUID");
-                    string fileName = @"C:\Temp\SmSpVimeo\dontDelete.txt";
+                    //if (File.Exists(@"C:\Temp\SmSpVimeo\Vimeo\dontDelete.txt"))
+                    //{
+                    //    File.Delete(@"C:\Temp\SmSpVimeo\Vimeo\dontDelete.txt");
+                    //}
+                    string fileName = @"C:\Temp\SmSpVimeo\Vimeo\dontDelete.txt";
                     FileInfo fi = new FileInfo(fileName);
                     using (StreamWriter sw = fi.CreateText())
                     {
                         sw.WriteLine(textBox1.Text);
                     }
-                    string Filename = @"C:\Temp\SmSpVimeo\dontDelete2.txt";
-                    if (File.Exists(@"C:\Temp\SmSpVimeo\dontDelete2.txt"))
-                    {
-                        File.Delete(@"C:\Temp\SmSpVimeo\dontDelete2.txt");
-                    }
+                    string Filename = @"C:\Temp\SmSpVimeo\Vimeo\dontDelete2.txt";
+                    //if (File.Exists(@"C:\Temp\SmSpVimeo\Vimeo\dontDelete2.txt"))
+                    //{
+                    //    File.Delete(@"C:\Temp\SmSpVimeo\Vimeo\dontDelete2.txt");
+                    //}
                     FileInfo fii = new FileInfo(Filename);
                     using (StreamWriter sw = fii.CreateText())
                     {

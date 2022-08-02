@@ -76,7 +76,8 @@ namespace WebBrowser_HTML_File_CS
             //this.FormBorderStyle = FormBorderStyle.None;
             //this.WindowState = FormWindowState.Maximized;
             //this.htmluiControl1.StartupDocument = @"C:\MyProjects\Startup\startup_page.htm";
-            string fileName = @"C:\Temp\SmSpVimeo\dontDelete.txt";
+            
+            string fileName = @"C:\Temp\SmSpVimeo\Vimeo\dontDelete.txt";
             FileInfo fi = new FileInfo(fileName);
             var uid = "";
             using (StreamReader sr = File.OpenText(fileName))
@@ -89,7 +90,7 @@ namespace WebBrowser_HTML_File_CS
                 }
             }
             userid = uid;
-            string fileNamee = @"C:\Temp\SmSpVimeo\dontDelete2.txt";
+            string fileNamee = @"C:\Temp\SmSpVimeo\Vimeo\dontDelete2.txt";
             FileInfo fii = new FileInfo(fileNamee);
             var accId = "";
             using (StreamReader sr = File.OpenText(fileNamee))
