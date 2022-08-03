@@ -39,7 +39,15 @@
 </head>
 
 <body>
-
+    <div>
+        <img src="https://img.pikbest.com/png-images/20190918/cartoon-snail-loading-loading-gif-animation_2734139.png" 
+        style=" display: block;
+        margin-left: auto;
+        margin-top: 10%;        
+        margin-right: auto;
+        height: 60%;
+        width: 40%;" />
+    </div>
     <div id="video-container"></div>
     <script>
         //var videoss = window.external.getVideoIds();
@@ -68,6 +76,9 @@
             // alert(video);
             if (!player) {
                 options.url = video;
+                options.byline = false;
+                options.portrait = false;
+                options.title = false;
                 //console.log(video, 'video*URL');
                 testid = video;
                 player = new Vimeo.Player('video-container', options);
@@ -114,7 +125,7 @@
                     
                     var respDateTime = GetPlaysTime();
                     videotime.push(respDateTime);
-                    SavePlays(respDblist);
+                    //SavePlays(respDblist);
                     //document.getElementById('div1').innerHTML = 'length3';
                 }
                 else if (videos.length == 2) {                    
@@ -132,8 +143,8 @@
                     //document.getElementById('div1').innerHTML = 'length0';
                     isLoadWindow = 1;
                     loopIndex++;
-                    getloopVideos(1);
                     SavePlays(respDblist);
+                    getloopVideos(1);                    
                 }
             });
         }

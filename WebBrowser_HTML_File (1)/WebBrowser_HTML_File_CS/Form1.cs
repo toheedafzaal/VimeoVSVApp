@@ -43,6 +43,7 @@ namespace WebBrowser_HTML_File_CS
             this.WindowState = FormWindowState.Maximized;
             InitializeComponent();
             //webView1.ScriptNotify += webView1_ScriptNotify;
+            //this.FormBorderStyle = FormBorderStyle.None;
         }
         public static string userid = "";
         public static int AccountId = 0;
@@ -50,7 +51,7 @@ namespace WebBrowser_HTML_File_CS
         {
             Form1 f = new Form1();
             f.TopMost = true;
-            f.FormBorderStyle = FormBorderStyle.None;
+            //f.FormBorderStyle = FormBorderStyle.None;
             f.WindowState = FormWindowState.Maximized;
 
         }
@@ -58,25 +59,12 @@ namespace WebBrowser_HTML_File_CS
         {
             Form1 ff = new Form1();
             ff.TopMost = false;
-            ff.FormBorderStyle = FormBorderStyle.Sizable;
+
             ff.WindowState = FormWindowState.Normal;
 
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            //CefSettings settings = new CefSettings();
-            //Cef.Initialize(settings);
-
-            Form1 frm1 = new Form1();
-            string screenWidth = Screen.PrimaryScreen.Bounds.Width.ToString();
-            string screenHeight = Screen.PrimaryScreen.Bounds.Height.ToString();
-            frm1.Size = new Size(Int16.Parse(screenWidth), Int16.Parse(screenHeight));
-            //frm1.StartPosition = FormStartPosition.CenterScreen;
-            //this.TopMost = true;
-            //this.FormBorderStyle = FormBorderStyle.None;
-            //this.WindowState = FormWindowState.Maximized;
-            //this.htmluiControl1.StartupDocument = @"C:\MyProjects\Startup\startup_page.htm";
-            
             string fileName = @"C:\Temp\SmSpVimeo\Vimeo\dontDelete.txt";
             FileInfo fi = new FileInfo(fileName);
             var uid = "";
@@ -101,43 +89,37 @@ namespace WebBrowser_HTML_File_CS
                     accId = s;
                 }
             }
-
-            const string htmlFragment =
-                  "<html><head><script type='text/javascript'>" +
-                  "  function callMe(incoming2){  window.external.notify('1-'); } " +
-                  "  function doubleIt(incoming){ " +
-
-                  "  var intIncoming = parseInt(incoming, 10);" +
-
-                  "  var doubled = intIncoming * 2;" +
-                  "  var loopIndex = 0;" +
-                  "  document.body.style.fontSize= doubled.toString() + 'px';" +
-                  "  window.external.notify('The script says the doubled value is ' + doubled.toString());" +
-                  "};" +
-                  "</script></head><body>"
-                  + "<div id='myDiv'>I AM CONTENT</div></body></html>";
-
             AccountId = Int16.Parse(accId);
-            //GetEntertainmentVideos(0);
-            //getVideoIds();
-            //getEndTime();
-            //getStartTime();
-            //this.webBrowser1.ObjectForScripting = this;
-            //this.webView1.ObjectForScripting = this;
-            Assembly assembly = Assembly.GetExecutingAssembly();
-            StreamReader reader = new StreamReader(assembly.GetManifestResourceStream("WebBrowser_HTML_File_CS.HTML.htm"));
-            //webBrowser1.DocumentText = reader.ReadToEnd();
-            //string fileNameee = Application.StartupPath + "/HTML.htm";
-            //string text = File.ReadAllText(fileNameee).Replace("\"","\'");
-            string data = reader.ReadToEnd();
-            //data = data.Replace("\"", "\'");
-            //string text = File.ReadAllText(data);
-            //text = "<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN'><html><head> <title></title> <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'></head><body> <iframe src='https://player.vimeo.com/video/732628233?h=cfc16cc37a' width='640' height='442' frameborder='0' allow='autoplay; fullscreen; picture-in-picture' allowfullscreen></iframe> <script>function setDate(){alert('test');}</script></body></html>";
+            string fileNameee = Application.StartupPath + "/HTML.htm";
+            string text = File.ReadAllText(fileNameee);
+            webView1.NavigateToString(text);
 
+            webView1.ContainsFullScreenElementChanged += (obj, args) =>
+            {
+                this.FullScreen = webView1.ContainsFullScreenElement;
+            };
+        }
 
-
-            webView1.NavigateToString(data);
-
+        private bool fullScreen = false;
+        [DefaultValue(false)]
+        public bool FullScreen
+        {
+            get { return fullScreen; }
+            set
+            {
+                fullScreen = value;
+                if (value)
+                {
+                    this.WindowState = FormWindowState.Normal;
+                    FormBorderStyle = FormBorderStyle.None;
+                    WindowState = FormWindowState.Maximized;
+                }
+                else
+                {
+                    this.Activate();
+                    this.FormBorderStyle = FormBorderStyle.Sizable;                   
+                }
+            }
         }
 
 
@@ -184,6 +166,7 @@ namespace WebBrowser_HTML_File_CS
         [HttpPost]
         public string GetEntertainmentVideos(int loopIndex)
         {
+            VideosList = new List<VSVShopVideos>();
             int accountId = AccountId;
             try
             {
@@ -258,10 +241,8 @@ namespace WebBrowser_HTML_File_CS
                     VideosLists = VideosList,
                     LoopEnded = false
                 };
-                //"{\"VideosLists\":[{\"Evid\":null,\"VidId\":null,\"VSVAccountID\":null,\"Url\":\"https://vimeo.com/651499777/35f8880f5d\",\"PlayTimeStamp\":\"0001-01-01T00:00:00\",\"VideoId\":\"651499777?h=35f8880f5d\"}],\"LoopEnded\":false}"
-                var xyyy = JsonConvert.SerializeObject(objDTO);
+
                 return JsonConvert.SerializeObject(objDTO);
-                //return JsonConvert.SerializeObject(objDTO);
             }
             catch (Exception ex)
             {
@@ -639,6 +620,11 @@ namespace WebBrowser_HTML_File_CS
         public void callme()
         {
             int a = 1;
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            webView1.Dispose();
         }
     }
 }

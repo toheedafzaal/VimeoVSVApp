@@ -28,22 +28,23 @@ namespace WebBrowser_HTML_File_CS
             Form1 vimeohome = new Form1();
             LoginScreen vimeologin = new LoginScreen();
             NewDateScreen dateScreen = new NewDateScreen();
-            var constring = ConfigurationManager.ConnectionStrings["vimeocs"].ConnectionString;
-            SqlConnection con = new SqlConnection(constring);
-            SqlCommand cmd = new SqlCommand();
+            //var constring = ConfigurationManager.ConnectionStrings["vimeocs"].ConnectionString;
+            //SqlConnection con = new SqlConnection(constring);
+            //SqlCommand cmd = new SqlCommand();
             if (textBox1.Text != string.Empty || textBox2.Text != string.Empty)
             {
 
-                cmd = new SqlCommand("select * from VSVAccount where UserId='" + textBox1.Text + "' and Password='" + textBox2.Text + "'", con);
-                con.Open();
-                SqlDataReader dr = cmd.ExecuteReader();
+                //cmd = new SqlCommand("select * from VSVAccount where UserId='" + textBox1.Text + "' and Password='" + textBox2.Text + "'", con);
+                //con.Open();
+                //SqlDataReader dr = cmd.ExecuteReader();
+                var data1 = pubsEntities.VSVAccounts.Where(x => x.UserID == textBox1.Text && x.Password == textBox2.Text).Select(x => x.VSVAccountID).FirstOrDefault();
 
-                if (dr.Read())
+                if (data1.ToString()!=null)
                 {
                     var data = pubsEntities.VSVAccounts.Where(x => x.UserID == textBox1.Text && x.Password ==  textBox2.Text ).Select(x => x.VSVAccountID).FirstOrDefault();
                     
                     string root = @"C:\Temp";
-                    string subdir = @"C:\Temp\SmSpVimeo\Vimeo\Vimeo";
+                    string subdir = @"C:\Temp\SmSpVimeo\Vimeo\";
                     // If directory does not exist, create it. 
                     if (!Directory.Exists(root))
                     {
@@ -53,7 +54,7 @@ namespace WebBrowser_HTML_File_CS
                     {
                         Directory.CreateDirectory(subdir);
                     }
-                    dr.Close();
+                    //dr.Close();
                     //if (File.Exists(@"C:\Temp\SmSpVimeo\Vimeo\dontDelete.txt"))
                     //{
                     //    File.Delete(@"C:\Temp\SmSpVimeo\Vimeo\dontDelete.txt");
@@ -84,10 +85,10 @@ namespace WebBrowser_HTML_File_CS
                 }
                 else
                 {
-                    dr.Close();
+                    //dr.Close();
                     MessageBox.Show("No Account avilable with this username and password ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                con.Close();
+                //con.Close();
 
             }
             else

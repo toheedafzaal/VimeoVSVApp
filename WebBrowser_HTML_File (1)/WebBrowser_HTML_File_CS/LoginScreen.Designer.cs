@@ -37,9 +37,9 @@ namespace WebBrowser_HTML_File_CS
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -102,11 +102,11 @@ namespace WebBrowser_HTML_File_CS
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
             this.label3.Location = new System.Drawing.Point(492, 75);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(207, 23);
+            this.label3.Size = new System.Drawing.Size(209, 24);
             this.label3.TabIndex = 5;
             this.label3.Text = "Add Your Credentials";
             // 
@@ -121,14 +121,26 @@ namespace WebBrowser_HTML_File_CS
             this.panel1.Size = new System.Drawing.Size(414, 532);
             this.panel1.TabIndex = 6;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.label4.Location = new System.Drawing.Point(74, 361);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(227, 29);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Smoke Vimeo Shop";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(36, 391);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(335, 22);
+            this.label5.Size = new System.Drawing.Size(319, 24);
             this.label5.TabIndex = 9;
             this.label5.Text = "We Design, We Develop, We Deliver";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -142,18 +154,6 @@ namespace WebBrowser_HTML_File_CS
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 18F);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
-            this.label4.Location = new System.Drawing.Point(74, 361);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(245, 30);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Smoke Vimeo Shop";
             // 
             // LoginScreen
             // 
@@ -169,7 +169,7 @@ namespace WebBrowser_HTML_File_CS
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginScreen";
-            this.Text = "Smoke Shop Video Credentials (Updated)";
+            this.Text = "Smoke Shop Vimeo Credentials (Updated)";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

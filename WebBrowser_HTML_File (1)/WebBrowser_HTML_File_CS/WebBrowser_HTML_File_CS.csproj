@@ -36,7 +36,7 @@
     <SuiteName>Toheed Afzaal</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>17</ApplicationRevision>
+    <ApplicationRevision>19</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -395,6 +395,8 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="cartoon animation.gif" />
+    <Content Include="loadingnew.gif" />
     <Content Include="logo icon.ico" />
     <Content Include="pubsmodel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

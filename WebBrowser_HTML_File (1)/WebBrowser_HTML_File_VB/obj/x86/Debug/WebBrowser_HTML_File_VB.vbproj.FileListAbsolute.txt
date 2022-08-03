@@ -29,3 +29,14 @@ C:\VimeoVsvEntityFrameworkAddition\WebBrowser_HTML_File (1)\WebBrowser_HTML_File
 C:\VimeoVsvEntityFrameworkAddition\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_VB\obj\x86\Debug\WebBrowser_HTML_File_VB.exe
 C:\VimeoVsvEntityFrameworkAddition\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_VB\obj\x86\Debug\WebBrowser_HTML_File_VB.xml
 C:\VimeoVsvEntityFrameworkAddition\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_VB\obj\x86\Debug\WebBrowser_HTML_File_VB.pdb
+C:\code\VimeoVsvEntityFrameworkAddition\VimeoVsvEntityFrameworkAddition\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_VB\bin\Debug\WebBrowser_HTML_File_VB.exe
+C:\code\VimeoVsvEntityFrameworkAddition\VimeoVsvEntityFrameworkAddition\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_VB\bin\Debug\WebBrowser_HTML_File_VB.pdb
+C:\code\VimeoVsvEntityFrameworkAddition\VimeoVsvEntityFrameworkAddition\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_VB\bin\Debug\WebBrowser_HTML_File_VB.xml
+C:\code\VimeoVsvEntityFrameworkAddition\VimeoVsvEntityFrameworkAddition\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_VB\obj\x86\Debug\WebBrowser_HTML_File_VB.Form1.resources
+C:\code\VimeoVsvEntityFrameworkAddition\VimeoVsvEntityFrameworkAddition\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_VB\obj\x86\Debug\WebBrowser_HTML_File_VB.Resources.resources
+C:\code\VimeoVsvEntityFrameworkAddition\VimeoVsvEntityFrameworkAddition\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_VB\obj\x86\Debug\WebBrowser_HTML_File_VB.vbproj.GenerateResource.cache
+C:\code\VimeoVsvEntityFrameworkAddition\VimeoVsvEntityFrameworkAddition\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_VB\obj\x86\Debug\WebBrowser_HTML_File_VB.vbproj.CoreCompileInputs.cache
+C:\code\VimeoVsvEntityFrameworkAddition\VimeoVsvEntityFrameworkAddition\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_VB\obj\x86\Debug\WebBrowser_HTML_File_VB.exe
+C:\code\VimeoVsvEntityFrameworkAddition\VimeoVsvEntityFrameworkAddition\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_VB\obj\x86\Debug\WebBrowser_HTML_File_VB.xml
+C:\code\VimeoVsvEntityFrameworkAddition\VimeoVsvEntityFrameworkAddition\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_VB\obj\x86\Debug\WebBrowser_HTML_File_VB.pdb
+C:\code\VimeoVsvEntityFrameworkAddition\VimeoVsvEntityFrameworkAddition\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_VB\obj\x86\Debug\WebBrowser_HTML_File_VB.vbproj.AssemblyReference.cache
