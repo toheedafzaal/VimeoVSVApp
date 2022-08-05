@@ -65,35 +65,21 @@ namespace WebBrowser_HTML_File_CS
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            string fileName = @"C:\Temp\SmSpVimeo\Vimeo\dontDelete.txt";
-            FileInfo fi = new FileInfo(fileName);
+            string FilePath = ConfigurationManager.AppSettings["LogPath"];
+            //string fileName = @"C:\Temp\SmSpVimeo\Vimeo\dontDelete3.txt";
             var uid = "";
-            using (StreamReader sr = File.OpenText(fileName))
-            {
-                string s = "";
+            uid = File.ReadAllText(FilePath);
+            char[] separators = new char[] { ' ', '$' };
 
-                while ((s = sr.ReadLine()) != null)
-                {
-                    uid = s;
-                }
-            }
-            userid = uid;
-            string fileNamee = @"C:\Temp\SmSpVimeo\Vimeo\dontDelete2.txt";
-            FileInfo fii = new FileInfo(fileNamee);
-            var accId = "";
-            using (StreamReader sr = File.OpenText(fileNamee))
-            {
-                string s = "";
-                while ((s = sr.ReadLine()) != null)
-                {
-                    accId = s;
-                }
-            }
-            AccountId = Int16.Parse(accId);
-            Assembly assembly = Assembly.GetExecutingAssembly();
-            StreamReader reader = new StreamReader(assembly.GetManifestResourceStream("WebBrowser_HTML_File_CS.HTML.htm"));
-            string data = reader.ReadToEnd();
-            webView1.NavigateToString(data);
+            string[] subs = uid.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+
+            userid = subs[0];
+            var accid = subs[1].ToString();
+            accid = accid.Substring(0, accid.Length - 2);
+            AccountId = Int16.Parse(accid);
+            string fileNameee = Application.StartupPath + "/HTML.htm";
+            string text = File.ReadAllText(fileNameee);
+            webView1.NavigateToString(text);
 
             webView1.ContainsFullScreenElementChanged += (obj, args) =>
             {
@@ -118,7 +104,7 @@ namespace WebBrowser_HTML_File_CS
                 else
                 {
                     this.Activate();
-                    this.FormBorderStyle = FormBorderStyle.Sizable;                   
+                    this.FormBorderStyle = FormBorderStyle.Sizable;
                 }
             }
         }
@@ -128,6 +114,12 @@ namespace WebBrowser_HTML_File_CS
         {
             Random rnd = new Random();
             int random = rnd.Next(maxLength - 1);
+            return random;
+        }
+        public int GetRandomNumber(int minValue, int maxLength)
+        {
+            Random rnd = new Random();
+            int random = rnd.Next(minValue, maxLength - 1);
             return random;
         }
         public string GetVimeoVideoId(string url)
@@ -208,15 +200,15 @@ namespace WebBrowser_HTML_File_CS
                 var countProdvideo = pubsEntities.VSVaccountprodvideos.Where(x => x.VSVAccountID == accountId).Count();
                 if (countProdvideo > 0)
                 {
-                    int respRandomNumProdFirst = GetRandomNumber(countProdvideo);
+                    int respRandomNumProdFirst = GetRandomNumber(1, countProdvideo / 3);
                     var prodVideo1 = GetProdVideos(accountId, respRandomNumProdFirst);
                     if (prodVideo1 != null)
                         VideosList.Add(prodVideo1);
-                    int respRandomNumProdSecond = GetRandomNumber(countProdvideo);
+                    int respRandomNumProdSecond = GetRandomNumber((countProdvideo / 3) + 1, countProdvideo / 2);
                     var prodVideo2 = GetProdVideos(accountId, respRandomNumProdSecond);
                     if (prodVideo2 != null)
                         VideosList.Add(prodVideo2);
-                    int respRandomNumProdThird = GetRandomNumber(countProdvideo);
+                    int respRandomNumProdThird = GetRandomNumber((countProdvideo / 2) + 1, countProdvideo);
                     var prodVideo3 = GetProdVideos(accountId, respRandomNumProdThird);
                     if (prodVideo3 != null)
                         VideosList.Add(prodVideo3);
@@ -305,227 +297,60 @@ namespace WebBrowser_HTML_File_CS
 
         public string getStartTime()
         {
-            var constring = ConfigurationManager.ConnectionStrings["vimeocs"].ConnectionString;
-            SqlConnection con = new SqlConnection(constring);
-            SqlCommand selectvideoids = new SqlCommand();
             DayOfWeek wk = DateTime.Today.DayOfWeek;
             var starttime = "";
-            DataTable dt = new DataTable();
-            var starttimee = new List<string>();
-            List<string> starttimeee = new List<string>();
-
             switch (wk)
             {
                 case DayOfWeek.Monday:
-                    Console.WriteLine("Monday");
-                    selectvideoids = new SqlCommand("Select MonStart from VSVAccount WHERE UserID ='" + userid + "'", con);
-                    con.Open();
-                    SqlDataReader selectedVids = selectvideoids.ExecuteReader();
-                    dt.Load(selectedVids);
-                    con.Close();
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        starttimee.Add(Convert.ToString(row["MonStart"]));
-                    }
-                    starttimeee = starttimee.ConvertAll<string>(x => x.ToString());
-                    starttime = String.Join(", ", starttimeee);
+                    starttime = pubsEntities.VSVAccounts.Where(x => x.UserID == userid).Select(x => x.MonStart).FirstOrDefault();
                     break;
                 case DayOfWeek.Tuesday:
-                    Console.WriteLine("Tuesday");
-                    selectvideoids = new SqlCommand("Select TueStart from VSVAccount WHERE UserID ='" + userid + "'", con);
-                    con.Open();
-                    SqlDataReader selectedVidss = selectvideoids.ExecuteReader();
-                    dt.Load(selectedVidss);
-                    con.Close();
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        starttimee.Add(Convert.ToString(row["TueStart"]));
-                    }
-                    starttimeee = starttimee.ConvertAll<string>(x => x.ToString());
-                    starttime = String.Join(", ", starttimeee);
+                    starttime = pubsEntities.VSVAccounts.Where(x => x.UserID == userid).Select(x => x.TueStart).FirstOrDefault();
                     break;
                 case DayOfWeek.Wednesday:
-                    Console.WriteLine("Wednesday");
-                    selectvideoids = new SqlCommand("Select WedStart from VSVAccount WHERE UserID ='" + userid + "'", con);
-                    con.Open();
-                    SqlDataReader selectedVidsss = selectvideoids.ExecuteReader();
-                    dt.Load(selectedVidsss);
-                    con.Close();
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        starttimee.Add(Convert.ToString(row["WedStart"]));
-                    }
-                    starttimeee = starttimee.ConvertAll<string>(x => x.ToString());
-                    starttime = String.Join(", ", starttimeee);
+                    starttime = pubsEntities.VSVAccounts.Where(x => x.UserID == userid).Select(x => x.WedStart).FirstOrDefault();
                     break;
                 case DayOfWeek.Thursday:
-                    Console.WriteLine("Thursday");
-                    selectvideoids = new SqlCommand("Select ThurStart from VSVAccount WHERE UserID ='" + userid + "'", con);
-                    con.Open();
-                    SqlDataReader selectedVidssss = selectvideoids.ExecuteReader();
-                    dt.Load(selectedVidssss);
-                    con.Close();
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        starttimee.Add(Convert.ToString(row["ThurStart"]));
-                    }
-                    starttimeee = starttimee.ConvertAll<string>(x => x.ToString());
-                    starttime = String.Join(", ", starttimeee);
+                    starttime = pubsEntities.VSVAccounts.Where(x => x.UserID == userid).Select(x => x.ThurStart).FirstOrDefault();
                     break;
                 case DayOfWeek.Friday:
-                    Console.WriteLine("Friday");
-                    selectvideoids = new SqlCommand("Select FriStart from VSVAccount WHERE UserID ='" + userid + "'", con);
-                    con.Open();
-                    SqlDataReader selectedVidsssss = selectvideoids.ExecuteReader();
-                    dt.Load(selectedVidsssss);
-                    con.Close();
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        starttimee.Add(Convert.ToString(row["FriStart"]));
-                    }
-                    starttimeee = starttimee.ConvertAll<string>(x => x.ToString());
-                    starttime = String.Join(", ", starttimeee);
+                    starttime = pubsEntities.VSVAccounts.Where(x => x.UserID == userid).Select(x => x.FriStart).FirstOrDefault();
                     break;
                 case DayOfWeek.Saturday:
-                    Console.WriteLine("Saturday");
-                    selectvideoids = new SqlCommand("Select SatStart from VSVAccount WHERE UserID ='" + userid + "'", con);
-                    con.Open();
-                    SqlDataReader selectedVidssssss = selectvideoids.ExecuteReader();
-                    dt.Load(selectedVidssssss);
-                    con.Close();
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        starttimee.Add(Convert.ToString(row["SatStart"]));
-                    }
-                    starttimeee = starttimee.ConvertAll<string>(x => x.ToString());
-                    starttime = String.Join(", ", starttimeee);
+                    starttime = pubsEntities.VSVAccounts.Where(x => x.UserID == userid).Select(x => x.SatStart).FirstOrDefault();
                     break;
                 case DayOfWeek.Sunday:
-                    Console.WriteLine("Sunday");
-                    selectvideoids = new SqlCommand("Select SunStart from VSVAccount WHERE UserID ='" + userid + "'", con);
-                    con.Open();
-                    SqlDataReader selectedVidsssssss = selectvideoids.ExecuteReader();
-                    dt.Load(selectedVidsssssss);
-                    con.Close();
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        starttimee.Add(Convert.ToString(row["SunStart"]));
-                    }
-                    starttimeee = starttimee.ConvertAll<string>(x => x.ToString());
-                    starttime = String.Join(", ", starttimeee);
+                    starttime = pubsEntities.VSVAccounts.Where(x => x.UserID == userid).Select(x => x.SunStart).FirstOrDefault();
                     break;
             }
             return starttime;
         }
         public string getEndTime()
         {
-            var constring = ConfigurationManager.ConnectionStrings["vimeocs"].ConnectionString;
-            SqlConnection con = new SqlConnection(constring);
-            SqlCommand selectvideoids = new SqlCommand();
             DayOfWeek wk = DateTime.Today.DayOfWeek;
             var stoptime = "";
-            DataTable dt = new DataTable();
-            var starttimee = new List<string>();
-            List<string> starttimeee = new List<string>();
             switch (wk)
             {
                 case DayOfWeek.Monday:
-                    Console.WriteLine("Monday");
-                    selectvideoids = new SqlCommand("Select MonStop from VSVAccount WHERE UserID ='" + userid + "'", con);
-                    con.Open();
-                    SqlDataReader selectedVids = selectvideoids.ExecuteReader();
-                    dt.Load(selectedVids);
-                    con.Close();
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        starttimee.Add(Convert.ToString(row["MonStop"]));
-                    }
-                    starttimeee = starttimee.ConvertAll<string>(x => x.ToString());
-                    stoptime = String.Join(", ", starttimeee);
+                    stoptime = pubsEntities.VSVAccounts.Where(x => x.UserID == userid).Select(x => x.MonStop).FirstOrDefault();
                     break;
                 case DayOfWeek.Tuesday:
-                    Console.WriteLine("Tuesday");
-                    selectvideoids = new SqlCommand("Select TueStop from VSVAccount WHERE UserID ='" + userid + "'", con);
-                    con.Open();
-                    SqlDataReader selectedVidss = selectvideoids.ExecuteReader();
-                    dt.Load(selectedVidss);
-                    con.Close();
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        starttimee.Add(Convert.ToString(row["TueStop"]));
-                    }
-                    starttimeee = starttimee.ConvertAll<string>(x => x.ToString());
-                    stoptime = String.Join(", ", starttimeee);
+                    stoptime = pubsEntities.VSVAccounts.Where(x => x.UserID == userid).Select(x => x.TueStop).FirstOrDefault();
                     break;
                 case DayOfWeek.Wednesday:
-                    Console.WriteLine("Wednesday");
-                    selectvideoids = new SqlCommand("Select WedStop from VSVAccount WHERE UserID ='" + userid + "'", con);
-                    con.Open();
-                    SqlDataReader selectedVidsss = selectvideoids.ExecuteReader();
-                    dt.Load(selectedVidsss);
-                    con.Close();
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        starttimee.Add(Convert.ToString(row["WedStop"]));
-                    }
-                    starttimeee = starttimee.ConvertAll<string>(x => x.ToString());
-                    stoptime = String.Join(", ", starttimeee);
+                    stoptime = pubsEntities.VSVAccounts.Where(x => x.UserID == userid).Select(x => x.WedStop).FirstOrDefault();
                     break;
                 case DayOfWeek.Thursday:
-                    Console.WriteLine("Thursday");
-                    selectvideoids = new SqlCommand("Select ThurStop from VSVAccount WHERE UserID ='" + userid + "'", con);
-                    con.Open();
-                    SqlDataReader selectedVidssss = selectvideoids.ExecuteReader();
-                    dt.Load(selectedVidssss);
-                    con.Close();
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        starttimee.Add(Convert.ToString(row["ThurStop"]));
-                    }
-                    starttimeee = starttimee.ConvertAll<string>(x => x.ToString());
-                    stoptime = String.Join(", ", starttimeee);
+                    stoptime = pubsEntities.VSVAccounts.Where(x => x.UserID == userid).Select(x => x.ThurStop).FirstOrDefault();
                     break;
                 case DayOfWeek.Friday:
-                    Console.WriteLine("Friday");
-                    selectvideoids = new SqlCommand("Select FriStop from VSVAccount WHERE UserID ='" + userid + "'", con);
-                    con.Open();
-                    SqlDataReader selectedVidsssss = selectvideoids.ExecuteReader();
-                    dt.Load(selectedVidsssss);
-                    con.Close();
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        starttimee.Add(Convert.ToString(row["FriStop"]));
-                    }
-                    starttimeee = starttimee.ConvertAll<string>(x => x.ToString());
-                    stoptime = String.Join(", ", starttimeee);
+                    stoptime = pubsEntities.VSVAccounts.Where(x => x.UserID == userid).Select(x => x.FriStop).FirstOrDefault();
                     break;
                 case DayOfWeek.Saturday:
-                    Console.WriteLine("Saturday");
-                    selectvideoids = new SqlCommand("Select SatStop from VSVAccount WHERE UserID ='" + userid + "'", con);
-                    con.Open();
-                    SqlDataReader selectedVidssssss = selectvideoids.ExecuteReader();
-                    dt.Load(selectedVidssssss);
-                    con.Close();
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        starttimee.Add(Convert.ToString(row["SatStop"]));
-                    }
-                    starttimeee = starttimee.ConvertAll<string>(x => x.ToString());
-                    stoptime = String.Join(", ", starttimeee);
+                    stoptime = pubsEntities.VSVAccounts.Where(x => x.UserID == userid).Select(x => x.SatStop).FirstOrDefault();
                     break;
                 case DayOfWeek.Sunday:
-                    Console.WriteLine("Sunday");
-                    selectvideoids = new SqlCommand("Select SunStop from VSVAccount WHERE UserID ='" + userid + "'", con);
-                    con.Open();
-                    SqlDataReader selectedVidsssssss = selectvideoids.ExecuteReader();
-                    dt.Load(selectedVidsssssss);
-                    con.Close();
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        starttimee.Add(Convert.ToString(row["SunStop"]));
-                    }
-                    starttimeee = starttimee.ConvertAll<string>(x => x.ToString());
-                    stoptime = String.Join(", ", starttimeee);
+                    stoptime = pubsEntities.VSVAccounts.Where(x => x.UserID == userid).Select(x => x.SunStop).FirstOrDefault();
                     break;
             }
             return stoptime;
@@ -597,8 +422,10 @@ namespace WebBrowser_HTML_File_CS
             else
             {
                 entVideoResponse = "-1";
-                if (DateTime.UtcNow >= (DateTimeOffset.Parse(getStartTime()).UtcDateTime) &&
-                    DateTime.UtcNow <= (DateTimeOffset.Parse(getEndTime()).UtcDateTime))
+                var cc = DateTimeOffset.Parse(getStartTime()).UtcDateTime;
+                var dd = DateTimeOffset.Parse(getEndTime()).UtcDateTime;
+                if (DateTime.UtcNow >= cc  &&
+                    DateTime.UtcNow <= dd)
                 {
                     jsScriptValue = e.Value;
                     entVideoResponse = GetEntertainmentVideos(Int16.Parse(jsScriptValue));

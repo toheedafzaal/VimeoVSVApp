@@ -76,7 +76,7 @@ namespace WebBrowser_HTML_File_CS
             private void button1_Click(object sender, EventArgs e)
         {
             //var userid = LoginScreen.vimeoUserId;
-            string fileName = @"C:\Temp\SmSpVimeo\Vimeo\dontDelete.txt";
+            string fileName = @"C:\Temp\SmSpVimeo\Vimeo\dontDelete3.txt";
             FileInfo fi = new FileInfo(fileName);
             var uid = "";
             using (StreamReader sr = File.OpenText(fileName))
@@ -88,7 +88,10 @@ namespace WebBrowser_HTML_File_CS
                     uid = s;
                 }
             }
-            var userid = uid;
+            char[] separators = new char[] { ' ', '$' };
+
+            string[] subs = uid.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+            var userid = subs[0];
             var mstarttime = monStartDTP.Value.ToShortTimeString();//2:49 PM
             var mendtime = monEndDTP.Value.ToShortTimeString();
             var monStartTime = getStartTime(mstarttime);

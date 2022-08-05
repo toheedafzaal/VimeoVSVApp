@@ -138,4 +138,3 @@ C:\code\VimeoVsvEntityFrameworkAddition\VimeoVsvEntityFrameworkAddition\WebBrows
 C:\code\VimeoVsvEntityFrameworkAddition\VimeoVsvEntityFrameworkAddition\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_CS\obj\x86\Debug\VimeoVSV.exe
 C:\code\VimeoVsvEntityFrameworkAddition\VimeoVsvEntityFrameworkAddition\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_CS\obj\x86\Debug\VimeoVSV.pdb
 C:\code\VimeoVsvEntityFrameworkAddition\VimeoVsvEntityFrameworkAddition\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_CS\bin\Debug\HTML.htm
-C:\code\VimeoVsvEntityFrameworkAddition\VimeoVsvEntityFrameworkAddition\WebBrowser_HTML_File (1)\WebBrowser_HTML_File_CS\obj\x86\Debug\WebBrowser_HTML_File_CS.csproj.AssemblyReference.cache

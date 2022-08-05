@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -21,9 +22,10 @@ namespace WebBrowser_HTML_File_CS
             //File.Delete(@"C:\Temp\SmSpVimeo\Vimeo\dontDelete.txt");
             var yrversion = Application.ProductVersion;
             yrversion = yrversion + 1;
-            
+
             //@"C:\Temp\SmSpVimeo\Vimeo\dontDelete.txt"
-            if (File.Exists(@"C:\Temp\SmSpVimeo\Vimeo\dontDelete.txt"))
+            string FilePath = ConfigurationManager.AppSettings["LogPath"];
+            if (File.Exists(FilePath))
             {
                 Application.Run(new Form1());
             }

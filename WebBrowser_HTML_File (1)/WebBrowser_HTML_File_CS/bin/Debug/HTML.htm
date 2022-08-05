@@ -40,7 +40,7 @@
 
 <body>
     <div>
-        <img src="https://img.pikbest.com/png-images/20190918/cartoon-snail-loading-loading-gif-animation_2734139.png" 
+        <img src="https://img.pikbest.com/png-images/20190918/cartoon-snail-loading-loading-gif-animation_2734139.png" id="loadingGif"
         style=" display: block;
         margin-left: auto;
         margin-top: 10%;        
@@ -81,6 +81,7 @@
                 options.title = false;
                 //console.log(video, 'video*URL');
                 testid = video;
+                document.getElementById('loadingGif').style.display = 'none';
                 player = new Vimeo.Player('video-container', options);
                 player.play();
 
