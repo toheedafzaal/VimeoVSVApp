@@ -77,9 +77,10 @@ namespace WebBrowser_HTML_File_CS
             var accid = subs[1].ToString();
             accid = accid.Substring(0, accid.Length - 2);
             AccountId = Int16.Parse(accid);
-            string fileNameee = Application.StartupPath + "/HTML.htm";
-            string text = File.ReadAllText(fileNameee);
-            webView1.NavigateToString(text);
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            StreamReader reader = new StreamReader(assembly.GetManifestResourceStream("WebBrowser_HTML_File_CS.HTML.htm"));
+            var data = reader.ReadToEnd();
+            webView1.NavigateToString(data);
 
             webView1.ContainsFullScreenElementChanged += (obj, args) =>
             {
