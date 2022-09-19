@@ -47,12 +47,11 @@
         margin-right: auto;
         height: 60%;
         width: 40%;" />
-        <!-- width: 600px; height: 600px; background: aliceblue; -->
     </div>
     <div id="sleepText">
         <h1 style=" text-align: center; margin-top: 10%; display: block; background: aliceblue;">App is sleeping . . .</h1>
     </div>
-    <div id="video-container"></div>
+    <div id="video-container" style="display:block"></div>
     <script>
         //var videoss = window.external.getVideoIds();
         var options = {
@@ -220,13 +219,15 @@
                 && EntertainmentVideosResponse != "-1")
             {
                 document.getElementById("loadingGif").style.display = "block";
+                document.getElementById("video-container").style.display = "block";
                 document.getElementById("sleepText").style.display = "none";
+                
                 nn(EntertainmentVideosResponse);
             }
             else {
-                document.getElementById("video-container").innerHTML = "";
                 document.getElementById("sleepText").style.display = "block";
                 document.getElementById("loadingGif").style.display = "none";
+                document.getElementById("video-container").style.display = "none";
                 setTimeout(getloopVideos,60000,1);
             }
         }
