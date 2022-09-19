@@ -41,12 +41,16 @@
 <body>
     <div>
         <img src="https://img.pikbest.com/png-images/20190918/cartoon-snail-loading-loading-gif-animation_2734139.png" id="loadingGif"
-        style=" display: block;
-        margin-left: auto;
-        margin-top: 10%;        
+             style=" display: none;
+        margin-left: 30%;
+        margin-top: 10%;
         margin-right: auto;
         height: 60%;
         width: 40%;" />
+        <!-- width: 600px; height: 600px; background: aliceblue; -->
+    </div>
+    <div id="sleepText">
+        <h1 style=" text-align: center; margin-top: 10%; display: block; background: aliceblue;">App is sleeping . . .</h1>
     </div>
     <div id="video-container"></div>
     <script>
@@ -69,7 +73,7 @@
             if (!videos.length) {
                 return false;
             }
-                 
+            document.getElementById("loadingGif").style.display = "none";
             var idReplaced = videos.shift();
             var video = 'https://vimeo.com/video/' + idReplaced;
             //var video = 'https://player.vimeo.com/video/503530088?h=35e64d6ee0';
@@ -210,11 +214,19 @@
 
         function GetloopVideosReponse(EntertainmentVideosResponsee) {            
             var EntertainmentVideosResponse = JSON.parse(EntertainmentVideosResponsee);
+            if (EntertainmentVideosResponse == -1)
+            {
+                document.getElementById("sleepText").style.display = "block";
+                document.getElementById("loadingGif").style.display = "none";
+            }
             if (EntertainmentVideosResponse
                 && EntertainmentVideosResponse != null
                 && EntertainmentVideosResponse != undefined
                 && EntertainmentVideosResponse != ''
-                && EntertainmentVideosResponse != "-1") {
+                && EntertainmentVideosResponse != "-1")
+            {
+                document.getElementById("loadingGif").style.display = "block";
+                document.getElementById("sleepText").style.display = "none";
                 nn(EntertainmentVideosResponse);
             }
             else {
