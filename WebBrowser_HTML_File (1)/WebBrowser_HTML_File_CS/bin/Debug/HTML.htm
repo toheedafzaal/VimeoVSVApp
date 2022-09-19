@@ -73,7 +73,6 @@
             if (!videos.length) {
                 return false;
             }
-            document.getElementById("loadingGif").style.display = "none";
             var idReplaced = videos.shift();
             var video = 'https://vimeo.com/video/' + idReplaced;
             //var video = 'https://player.vimeo.com/video/503530088?h=35e64d6ee0';
@@ -214,11 +213,6 @@
 
         function GetloopVideosReponse(EntertainmentVideosResponsee) {            
             var EntertainmentVideosResponse = JSON.parse(EntertainmentVideosResponsee);
-            if (EntertainmentVideosResponse == -1)
-            {
-                document.getElementById("sleepText").style.display = "block";
-                document.getElementById("loadingGif").style.display = "none";
-            }
             if (EntertainmentVideosResponse
                 && EntertainmentVideosResponse != null
                 && EntertainmentVideosResponse != undefined
@@ -230,6 +224,9 @@
                 nn(EntertainmentVideosResponse);
             }
             else {
+                document.getElementById("video-container").innerHTML = "";
+                document.getElementById("sleepText").style.display = "block";
+                document.getElementById("loadingGif").style.display = "none";
                 setTimeout(getloopVideos,60000,1);
             }
         }

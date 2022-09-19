@@ -416,7 +416,6 @@ namespace WebBrowser_HTML_File_CS
                 {
                     List<VSVShopVideos> tmp = JsonConvert.DeserializeObject<List<VSVShopVideos>>(jsScriptValue);
                     SavePlaysVideos(tmp);
-
                     webView1.InvokeScript("GetloopVideosReponse", new string[] { jsScriptValue });
                 }
             }
