@@ -422,10 +422,15 @@ namespace WebBrowser_HTML_File_CS
             else
             {
                 entVideoResponse = "-1";
-                var cc = DateTimeOffset.Parse(getStartTime()).UtcDateTime;
-                var dd = DateTimeOffset.Parse(getEndTime()).UtcDateTime;
-                if (DateTime.UtcNow >= cc  &&
-                    DateTime.UtcNow <= dd)
+                var stime = getStartTime();
+                var etime = getEndTime();
+                //var startTime = DateTimeOffset.Parse(stime).UtcDateTime;
+                //var endTime = DateTimeOffset.Parse(etime).UtcDateTime;
+                var startTime = DateTime.Parse(stime);
+                var endTime = DateTime.Parse(etime);
+
+                if (DateTime.UtcNow >= startTime &&
+                    DateTime.UtcNow <= endTime)
                 {
                     jsScriptValue = e.Value;
                     entVideoResponse = GetEntertainmentVideos(Int16.Parse(jsScriptValue));
