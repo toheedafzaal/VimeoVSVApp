@@ -424,10 +424,10 @@ namespace WebBrowser_HTML_File_CS
                 entVideoResponse = "-1";
                 var stime = getStartTime();
                 var etime = getEndTime();
-                //var startTime = DateTimeOffset.Parse(stime).UtcDateTime;
-                //var endTime = DateTimeOffset.Parse(etime).UtcDateTime;
-                var startTime = DateTime.Parse(stime);
-                var endTime = DateTime.Parse(etime);
+                var startTime = DateTimeOffset.Parse(stime).UtcDateTime;
+                var endTime = DateTimeOffset.Parse(etime).UtcDateTime;
+                //var startTime = DateTime.Parse(stime);
+                //var endTime = DateTime.Parse(etime);
 
                 if (DateTime.UtcNow >= startTime &&
                     DateTime.UtcNow <= endTime)
